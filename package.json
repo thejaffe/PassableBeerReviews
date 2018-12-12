@@ -1,0 +1,23 @@
+{
+  "name": "pbr",
+  "version": "1.0.0",
+  "description": "Simple template server for static site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thejaffe/PassableBeerReviews.git"
+  },
+  "author": "Jeremy Trantham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thejaffe/PassableBeerReviews/issues"
+  },
+  "homepage": "https://github.com/thejaffe/PassableBeerReviews#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}

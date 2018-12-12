@@ -68,7 +68,7 @@ body {
 }
 
 #homebody{
-  background: url("images/background.jpg") center top no-repeat;
+  background: url("../images/background.jpg") center top no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -184,16 +184,16 @@ a {color: white;}
 .beer-circle:hover {background-color: var(--blue);}
 
 .one {
-  background-image: url("images/coronafamiliar.png");
+  background-image: url("../images/coronafamiliar.png");
 }
 .two {
-  background-image: url("images/fosters.png");
+  background-image: url("../images/fosters.png");
 }
 .three {
-  background-image: url("images/narragansett.png");
+  background-image: url("../images/narragansett.png");
 }
 .four {
-  background-image: url("images/pabstapacan.png");
+  background-image: url("../images/pabstapacan.png");
 }
 
 form {
@@ -280,12 +280,12 @@ p a, .ratings a, article li a, input[type=submit] {
 
 /* HOME PAGE SPECIFIC STYLES ------------------------------------------------ */
 #top-home-panel {
-  background: url("images/homeback.jpg") no-repeat center;
+  background: url("../images/homeback.jpg") no-repeat center;
   background: linear-gradient(
     rgba(160, 82, 45, 0.3),
   	rgba(160, 82, 45, 0.3)
     ),
-    url("images/homeback.jpg") no-repeat center;
+    url("../images/homeback.jpg") no-repeat center;
   background-size: cover;
   padding-bottom: 1em;
 }
@@ -394,7 +394,7 @@ ol {list-style-type: decimal; padding: 0 2em;}
   display: inline-block;
   height: 1.25em;
   width: 1.25em;
-  background: url("images/white-beermug.svg") no-repeat;
+  background: url("../images/white-beermug.svg") no-repeat;
   background-size: contain;
   vertical-align: middle;
 
@@ -417,7 +417,7 @@ ol {list-style-type: decimal; padding: 0 2em;}
 
 /* Ratings Class Styles ------------------------------------------------------*/
 .ratings {
-  background: url("images/beerbanner.jpg") no-repeat center;
+  background: url("../images/beerbanner.jpg") no-repeat center;
   background-size: cover;
   line-height: 1;
   font-size: 1.35em;
@@ -646,7 +646,7 @@ footer p {
       background: none;
       width: 100%;
       max-height: none;
-      background: url("images/background.jpg") center top no-repeat;
+      background: url("../images/background.jpg") center top no-repeat;
       background-size: contain;
       height: 100%;
       display: flex;
@@ -658,7 +658,7 @@ footer p {
       display: inline-block;
       height: 1.5em;
       width: 1.5em;
-      background: url("images/beermug.svg") no-repeat;
+      background: url("../images/beermug.svg") no-repeat;
       background-size: contain;
       padding-left: 2em;
       vertical-align: middle;
@@ -721,7 +721,7 @@ footer p {
       align-items: center;
       margin-top: 3em;
       border-left: 3px solid var(--blue);
-      background: url("images/background-thin.jpg") center top space;
+      background: url("../images/background-thin.jpg") center top space;
       background-size: contain;
     }
 
