@@ -62,7 +62,7 @@ hr {visibility: hidden;}
 header > nav, hr, #bottom-home-panel img {display: none;}
 
 body {
-  font-family: var(--ff);
+  font-family: var(--ff, 'Verdana', 'Arial', sans-serif);
   font-size: 100%;
   overflow-x: hidden;
 }
@@ -92,13 +92,13 @@ p a, .ratings a, article li a {
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: var(--red);
+	background-color: var(--red, #C5091F);
 	visibility: hidden;
 	transform: scaleX(0);
 	transition: all 0.3s ease-in-out 0s;
 }
 
-p a:hover, .ratings a:hover, article li a:hover {color: var(--red);}
+p a:hover, .ratings a:hover, article li a:hover {color: var(--red, #C5091F);}
 
 .ratings a:hover:before, p a:hover:before, article li a:hover:before {
 	visibility: visible;
@@ -109,12 +109,12 @@ body strong, h1, h2, h3 {font-weight: bold;}
 
 em {font-style: italic;}
 
-h1, h2, h3 {font-family: var(--ff-headline); text-align: center;}
+h1, h2, h3 {font-family: var(--ff-headline, 'Bookman', 'Times New Roman', serif); text-align: center;}
 
 h1 {
-  font-family: var(--ff-headline);
+  font-family: var(--ff-headline, 'Bookman', 'Times New Roman', serif);
   font-size: 3em;
-  color: var(--blue);
+  color: var(--blue, #102C73);
   padding: 0.25em 0;
 }
 
@@ -124,14 +124,14 @@ h3 {font-size: 1.75em;}
 
 .firstletter {
 	font-size: 2em;
-	color: var(--red);
+	color: var(--red, #C5091F);
 }
 
 .bottom {margin-bottom: 3.5em;}
 
 header {
-  background-color: var(--blue);
-  border-bottom: 5px solid var(--gray);
+  background-color: var(--blue, #102C73);
+  border-bottom: 5px solid var(--gray, #C4C4C4);
   min-height: 100px;
   display: flex;
   align-items: center;
@@ -153,12 +153,12 @@ figcaption {
   font-size: 0.85em;
   margin: 1em;
   padding-bottom: 1em;
-  border-bottom: 3px solid var(--gray);
+  border-bottom: 3px solid var(--gray, #C4C4C4);
 }
 
 a {color: white;}
 
-.active{color: var(--gray);}
+.active{color: var(--gray, #C4C4C4);}
 
 .beer-links {
   display: flex;
@@ -171,7 +171,7 @@ a {color: white;}
 	height: 10em;
   margin-bottom: 0.5em;
 	border-radius: 50%;
-	border: 4px dashed var(--gray);
+	border: 4px dashed var(--gray, #C4C4C4);
   background: no-repeat center;
   background-size: contain;
   background-color: rgba(16, 44, 115, 0.7);
@@ -181,7 +181,7 @@ a {color: white;}
   font-weight: bold;
 }
 
-.beer-circle:hover {background-color: var(--blue);}
+.beer-circle:hover {background-color: var(--blue, #102C73);}
 
 .one {
   background-image: url("../images/coronafamiliar.png");
@@ -200,7 +200,7 @@ form {
 	padding: 2em;
 	width: 100%;
 	margin: 0 auto;
-	background-color: var(--blue);
+	background-color: var(--blue, #102C73);
 	color: white;
   display: flex;
   flex-direction: column;
@@ -222,6 +222,7 @@ textarea {height: 75px;}
 input[type=text]{height: 36px;}
 
 .label-text, .textarea-text {
+  display: block;
   color: gray;
   cursor: text;
   transition: all 0.4s ease;
@@ -235,8 +236,8 @@ input, textarea {
     width: 100%;
     padding: 1em;
     border: none;
-    border-radius: var(--border-radius);
-    margin: 0.5em; 0;
+    border-radius: var(--border-radius, 5px);
+    margin: 0.5em 0;
 }
 
 input:focus ~ .label-text, input:valid ~ .label-text {
@@ -252,7 +253,7 @@ textarea:focus ~ .textarea-text, textarea:valid ~ .textarea-text {
 input[type=submit] {
 		font-size: 1em;
 		font-weight: bold;
-    background-color: var(--red);
+    background-color: var(--red, #C5091F);
     color: white;
     padding: 12px 20px;
     border: none;
@@ -260,18 +261,18 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {color: var(--blue);}
+input[type=submit]:hover {color: var(--blue, #102C73);}
 
 /* Hover transitions ------*/
 
 p a, .ratings a, article li a, input[type=submit] {
   -webkit-transition: all 0.3s ease-in-out 0s;
-  transition-property: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .beer-circle:hover {border-style: solid;}
 
-.home-circle:hover {border-color: var(--blue);}
+.home-circle:hover {border-color: var(--blue, #102C73);}
 
 .beer-circle {
   -webkit-transition: all 0.75s ease;
@@ -291,7 +292,7 @@ p a, .ratings a, article li a, input[type=submit] {
 }
 
 #top-home-panel h2 {
-  font-family: var(--ff-cursive);
+  font-family: var(--ff-cursive, 'Damion', cursive);
   font-weight: 400;
   color: white;
 }
@@ -337,8 +338,8 @@ article img {
 }
 
 .bottle {
-  shape-outside: polygon(60.70% 1.06%, 62.08% 9.55%, 66.09% 22.74%, 66.26% 42.80%, 76.07% 50.16%, 77.06% 65.52%, 76.83% 88.96%, 73.77% 97.53%, 58.21% 100.65%, 42.05% 100.79%, 23.16% 98.11%, 21.76% 89.29%, 33.05% 1.13%);
   -webkit-shape-outside: polygon(60.70% 1.06%, 62.08% 9.55%, 66.09% 22.74%, 66.26% 42.80%, 76.07% 50.16%, 77.06% 65.52%, 76.83% 88.96%, 73.77% 97.53%, 58.21% 100.65%, 42.05% 100.79%, 23.16% 98.11%, 21.76% 89.29%, 33.05% 1.13%);
+  shape-outside: polygon(60.70% 1.06%, 62.08% 9.55%, 66.09% 22.74%, 66.26% 42.80%, 76.07% 50.16%, 77.06% 65.52%, 76.83% 88.96%, 73.77% 97.53%, 58.21% 100.65%, 42.05% 100.79%, 23.16% 98.11%, 21.76% 89.29%, 33.05% 1.13%);
 }
 
 .can {
@@ -365,8 +366,8 @@ ol {list-style-type: decimal; padding: 0 2em;}
   transition: max-height 700ms ease-in-out;
   max-height: 0;
   color: white;
-  background-color: var(--blue);
-  border-radius: var(--border-radius);
+  background-color: var(--blue, #102C73);
+  border-radius: var(--border-radius, 5px);
   width: 85%;
   margin: 0 auto 1em auto;
   padding: 0;
@@ -384,9 +385,9 @@ ol {list-style-type: decimal; padding: 0 2em;}
   margin: 0 auto .3em auto;
   font-size: 1.5em;
   color: white;
-  background-color: var(--blue);
+  background-color: var(--blue, #102C73);
   width: 85%;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius, 5px);
 }
 
 #info-toggle-label:before {
@@ -404,13 +405,13 @@ ol {list-style-type: decimal; padding: 0 2em;}
 
 #info-toggle:checked ~ .infobox {
   max-height: 1000px;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius, 5px);
 }
 #info-toggle:checked ~ label::before {
   transform: rotate(-90deg) translate(5px);
 }
 
-.infobox li {
+li {
   padding: 0.5em 1em;
   line-height: 1.4;
 } /* End infobox popout styles ------- */
@@ -422,7 +423,7 @@ ol {list-style-type: decimal; padding: 0 2em;}
   line-height: 1;
   font-size: 1.35em;
   font-weight: bold;
-  color: var(--blue);
+  color: var(--blue, #102C73);
   margin-bottom: 1em;
   padding: 1.25em;
 }
@@ -443,7 +444,7 @@ footer {
   bottom: 0;
   height: 2.5em;
   width: 100%;
-  background-color: var(--red);
+  background-color: var(--red, #C5091F);
   z-index: 1;
   color: white;
   display: flex;
@@ -475,7 +476,7 @@ footer p {
   bottom: 2.5em;
   right: 0;
   width: 100%;
-  background: var(--red);
+  background: var(--red, #C5091F);
   transform: scale(1, 0);
   transform-origin: bottom;
   transition: transform 500ms ease-in-out;
@@ -488,7 +489,7 @@ footer p {
 }
 
 .bottomnav-toggle-label:hover {
-  color: var(--blue);
+  color: var(--blue, #102C73);
 }
 
 .bottomnav li {
@@ -503,7 +504,7 @@ footer p {
 }
 
 .bottomnav a:hover {
-  color: var(--blue);
+  color: var(--blue, #102C73);
 }
 
 #bottomnav-toggle:checked ~ .bottomnav {
@@ -592,14 +593,14 @@ footer p {
       display: block;
       width: 100%;
       grid-area: 2 / 1 / 3 / 3;
-      background-color: var(--red);
+      background-color: var(--red, #C5091F);
       font-size: 1.1em;
       font-weight: bold;
     }
 
     .topnav ul {
       display: flex;
-      background: var(--red);
+      background: var(--red, #C5091F);
       align-items: center;
       justify-content: space-around;
     }
@@ -616,9 +617,9 @@ footer p {
       transition: all 0.6s ease 0.01s;
     }
 
-    .topnav ul li:hover {background: var(--blue);}
+    .topnav ul li:hover {background: var(--blue, #102C73);}
 
-    .topnav ul li a:hover {color: var(--gray);}
+    .topnav ul li a:hover {color: var(--gray, #C4C4C4);}
 
     #info-toggle-label {
       display: none;
@@ -675,7 +676,7 @@ footer p {
       visibility: visible;
       width: 100%;
       grid-column: 1 / 3;
-      border-top: 3px solid var(--blue);
+      border-top: 3px solid var(--blue, #102C73);
       margin: 0 1.5em 1em 1.5em;
     }
   } /*END 655px Media Query */
@@ -720,7 +721,7 @@ footer p {
       justify-content: space-around;
       align-items: center;
       margin-top: 3em;
-      border-left: 3px solid var(--blue);
+      border-left: 3px solid var(--blue, #102C73);
       background: url("../images/background-thin.jpg") center top space;
       background-size: contain;
     }
