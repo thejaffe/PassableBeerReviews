@@ -1,5 +1,5 @@
-const sanitizeHtml  = require('sanitize-html'),
-      nodeMailer    = require('nodemailer');
+const sanitize  = require('sanitize-html'),
+      sgMail        = require('@sendgrid/mail');
 
 
 
@@ -8,27 +8,22 @@ module.exports = {
 
   mailSuggestion: (first, last, email, suggestion) => {
 
-    let transporter = {
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
-      auth: {
-        user: 'passablebeers@gmail.com',
-        pass: '#PassableBeersAreBeersToo'
-      }
-    };
+    sgMail.setApiKey('process.env.SENDGRID_API_KEY');
 
-    let mailOpts = {
-      replyTo: email,
+    let msg = {
       to: 'passablebeers@gmail.com',
+      from: email,
       subject: `Beer Suggestion from ${first + ' ' + last}`,
       text: suggestion
     };
 
-    console.log(email);
+    let result = sgMail.send(msg).then(() => {
+      return (false).end();
+    }).catch(e => {
+      console.log(e.toString());
+      return (e.toString().end());
+    });
 
-    let mailer = nodeMailer.createTransport(transporter);
-
-    mailer.sendMail(mailOpts, (error, response) => error);
+    console.log(result);
   }
 }
