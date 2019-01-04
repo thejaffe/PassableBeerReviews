@@ -12,25 +12,22 @@
 
     <h1>Suggest a Beer</h1>
 
-    <form action="example.com">
+    <form action="/contact" method="post">
 
       <label>
-        <input type="text" required/>
+        <input type="text" name="first" required/>
         <span class="label-text">First name</span>
       </label>
-
       <label>
-        <input type="text" required/>
+        <input type="text" name="last" required/>
         <span class="label-text">Last name</span>
       </label>
-
       <label>
-        <input type="text" required/>
+        <input type="email" name="email" required/>
         <span class="label-text">Email</span>
       </label>
-
       <label>
-        <textarea required></textarea>
+        <textarea name="suggestion" required></textarea>
         <span class="textarea-text">Beer suggestion</span>
       </label>
 
