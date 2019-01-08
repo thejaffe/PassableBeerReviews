@@ -1,7 +1,9 @@
 const express = require('express'),
       router  = express.Router(),
-      sgMail  = require('@sendgrid/mail'),
-      sanitize  = require('sanitize-html')
+      sgMail = require('@sendgrid/mail'),
+      sanitize  = require('sanitize-html');
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 router.get('/', (req, res) => res.render('index.html'));
 
@@ -14,8 +16,6 @@ router.post('/contact', (req, res) => {
       last        = sanitize(req.body.last),
       email       = sanitize(req.body.email),
       suggestion  = sanitize(req.body.suggestion);
-
-      sgMail.setApiKey('process.env.SENDGRID_API_KEY');
 
       let msg = {
         to: 'passablebeers@gmail.com',
