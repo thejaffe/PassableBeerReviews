@@ -12,28 +12,34 @@
 
     <h1>Suggest a Beer</h1>
 
-    <form action="/contact" method="post">
+    <div id="suggestion-box">
+      <img src="images/beerrecommendation.jpg" alt="The author of Passable Beer Reviews standing next to a cardboard cutout of the former Most Interesting Man in the World.">
 
-      <label>
-        <input type="text" name="first" required/>
-        <span class="label-text">First name</span>
-      </label>
-      <label>
-        <input type="text" name="last" required/>
-        <span class="label-text">Last name</span>
-      </label>
-      <label>
-        <input type="email" name="email" required/>
-        <span class="label-text">Email</span>
-      </label>
-      <label>
-        <textarea name="suggestion" required></textarea>
-        <span class="textarea-text">Beer suggestion</span>
-      </label>
+      <form action="/contact" method="post">
 
-      <input type="submit" value="Submit">
+        <label>
+          <input type="text" name="first" required/>
+          <span class="label-text">First name</span>
+        </label>
 
-    </form>
+        <label>
+          <input type="text" name="last" required/>
+          <span class="label-text">Last name</span>
+        </label>
+
+        <label>
+          <input type="email" name="email" required/>
+          <span class="label-text">Email</span>
+        </label>
+
+        <label>
+          <textarea name="suggestion" required></textarea>
+          <span class="textarea-text">Beer suggestion</span>
+        </label>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
 
     <h3><span class="firstletter">R</span>ecent Reviews</h3>
 

@@ -12,27 +12,33 @@ router.get('/:article', (req, res) => res.render(req.params.article));
 router.get('/reviews/:beer', (req, res) => res.render(req.params.beer));
 
 router.post('/contact', (req, res) => {
-  let first       = sanitize(req.body.first),
-      last        = sanitize(req.body.last),
-      email       = sanitize(req.body.email),
-      suggestion  = sanitize(req.body.suggestion);
 
-      let msg = {
-        to: 'passablebeers@gmail.com',
-        from: email,
-        subject: `Beer Suggestion from ${first + ' ' + last}`,
-        text: suggestion
-      };
+  let msg = message(req);
 
       sgMail.send(msg, (error) => {
         if (error) {
           let {message} = error;
-          console.log(error.toString());
           res.render('error.html', { message: message });
         } else {
           res.render('success.html');
         }
       });
 });
+
+const message = (req) => {
+  let first       = sanitize(req.body.first),
+      last        = sanitize(req.body.last),
+      email       = sanitize(req.body.email),
+      suggestion  = sanitize(req.body.suggestion);
+
+  let msg = {
+    to: 'passablebeers@gmail.com',
+    from: email,
+    subject: `Beer Suggestion from ${first + ' ' + last}`,
+    text: suggestion
+  };
+
+  return msg;
+}
 
 module.exports = router;

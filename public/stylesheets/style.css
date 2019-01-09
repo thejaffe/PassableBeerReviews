@@ -1,4 +1,6 @@
-/* Colors, font, and border radius variables to be used throughout the site ---
+/* Author: Jeremy Trantham
+License: none(public domain)
+Colors, font, and border radius variables to be used throughout the site ---
 colors were chosen to match those used by Pabst Blue Ribbon beer ------------ */
 :root {
   --blue: #102C73;
@@ -14,6 +16,8 @@ colors were chosen to match those used by Pabst Blue Ribbon beer ------------ */
   --border-radius: 5px;
 
   --box-shadow: 4px 4px 8px #aaa;
+
+  --pourHeight: -200vh; /*fallback if does not reset it) */
 }
 
 /*
@@ -59,7 +63,7 @@ hr {visibility: hidden;}
 /* Main Content -------------------------------------------------------- */
 
 /* Do not display non-mobile items */
-header > nav, hr, #bottom-home-panel img {display: none;}
+header > nav, hr, #suggestion-box img {display: none;}
 
 body {
   font-family: var(--ff, 'Verdana', 'Arial', sans-serif);
@@ -145,7 +149,7 @@ img {
 
 header img {height: 100px;}
 
-figure img, #bottom-home-panel > * {box-shadow: 4px 4px 5px #aaa;}
+figure img, #suggestion-box > * {box-shadow: 4px 4px 5px #aaa;}
 
 figcaption {
   font-style: italic;
@@ -218,9 +222,9 @@ form label {
   text-align: center;
   margin: 0 auto;}
 
-  form > * {max-width: 37.5em;}
+form > * {max-width: 37.5em;}
 
-textarea {height: 75px;}
+textarea {height: 75px; resize: none;}
 
 input[type=text]{height: 36px;}
 
@@ -542,22 +546,22 @@ footer p {
 
 @media only screen and (min-width: 1028px) {
 
-  #bottom-home-panel{max-width: 1000px; margin: 1em auto;}
+  #suggestion-box{max-width: 1000px; margin: 1em auto;}
 
-  #bottom-home-panel form, #bottom-home-panel img {margin: 0;}
+  #suggestion-box form, #suggestion-box img {margin: 0;}
 
-  #bottom-home-panel {
+  #suggestion-box {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
   }
 
-  #bottom-home-panel form {
+  #suggestion-box form {
     flex-grow: 1;
     margin-left: 1em;
   }
 
-  #bottom-home-panel img {
+  #suggestion-box img {
     display: block;
     max-height: 417px;
     flex-grow: 0;
@@ -708,7 +712,7 @@ footer p {
 
     @keyframes pour {
       0% {
-        transform: translateY(-200vh);
+        transform: translateY(var(--pourHeight));
       }
       100% {
         transform: translateY(0);
