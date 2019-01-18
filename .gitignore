@@ -1,3 +1,5 @@
-sendgrid.env
+*.env
 app.yaml
 tslint.json
+tsconfig.json
+/dist

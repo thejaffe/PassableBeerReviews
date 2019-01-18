@@ -19,3 +19,4 @@ node_modules/
 # typescript files
 *.ts
 tslint.json
+/src

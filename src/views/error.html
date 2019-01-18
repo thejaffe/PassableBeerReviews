@@ -1,0 +1,29 @@
+<% include partials/boilerplate %>
+
+    <title>Error</title>
+
+    <!-- [if lt IE 9]>
+      <script src="files/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <% include partials/header %>
+
+    <h1><%= title %></h1>
+
+    <article>
+      <p>Sorry. Something went wrong.</p>
+      <p>Error: <%= message %></p>
+    </article>
+
+    <h3><span class="firstletter">R</span>ecent Reviews</h3>
+
+    <aside class="beer-links">
+      <% include partials/beerlinks %>
+    </aside>
+
+    <% include partials/footer %>
+    <script src="/js/active-class_article.js"></script>
+  </body>
+</html>
