@@ -1,5 +1,5 @@
 {
-  "name": "pbr",
+  "name": "passablebeers",
   "version": "1.0.0",
   "description": "Simple template server for static site",
   "main": "dist/index.js",

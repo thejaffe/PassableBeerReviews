@@ -3,3 +3,6 @@ app.yaml
 tslint.json
 tsconfig.json
 /dist
+*.crt
+*.key
+*.pem
