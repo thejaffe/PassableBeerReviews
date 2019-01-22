@@ -6,3 +6,6 @@ tsconfig.json
 *.crt
 *.key
 *.pem
+robots.txt
+sitemap.xml
+BingSiteAuth.xml

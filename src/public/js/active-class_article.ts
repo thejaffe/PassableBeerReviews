@@ -4,7 +4,7 @@
 
   const elements: HTMLCollection =
               document.getElementsByTagName("nav")[0].getElementsByTagName("a");
-  const listLength: number = elements.length;
+  const listLength: number = elements.length - 1;
   const current: string = global.location.pathname.split("/")[1];
 
   let i: number = 0;

@@ -20,3 +20,7 @@ node_modules/
 *.ts
 tslint.json
 /src
+
+// unneeded at the moment
+*.crt
+*.key

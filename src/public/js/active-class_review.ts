@@ -3,7 +3,7 @@
 ((global) => {
 
   const elements: HTMLCollection = document.getElementsByClassName("beer-circle");
-  const listLength: number = elements.length;
+  const listLength: number = elements.length - 1;
   const current: string = global.location.pathname.split("/")[2];
 
   let i: number = 0;
