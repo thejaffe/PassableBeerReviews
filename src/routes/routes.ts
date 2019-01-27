@@ -25,7 +25,7 @@ router.get("/:article", (req: Request, res: Response) => {
 // beer review routes
 router.get("/reviews/:beer", (req: Request, res: Response) => {
   if (publishedViews.reviews.indexOf(req.params.beer) === -1) {
-    throw new Error("Cannot Get requested beer review");
+    throw new Error("Cannot Get requested page");
   } else {
     res.render(req.params.beer);
   }
@@ -35,8 +35,8 @@ router.get("/reviews/:beer", (req: Request, res: Response) => {
 router.post("/contact", asyncWrapper(async (req: Request, res: Response) => {
 
   const msg = await new Mail(req);
-
   await SendGrid.send(msg);
+
   res.render("success.html");
 }));
 
