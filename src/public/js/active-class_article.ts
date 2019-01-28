@@ -7,11 +7,11 @@
   const listLength: number = elements.length - 1;
   const current: string = global.location.pathname.split("/")[1];
 
-  let i: number = 0;
-  while (elements[i].toString().split("/")[3] !== current && i < listLength) {
-    i++;
+  for (let i = 0; i < listLength; i++) {
+    if (elements[i].toString().split("/")[3] === current) {
+      elements[i].classList.add("active");
+      break;
+    }
   }
-
-  elements[i].classList.add("active");
 
 })(window);
