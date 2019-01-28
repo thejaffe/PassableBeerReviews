@@ -14,7 +14,8 @@ export class PublishedViews {
       "fosters.html",
       "hamms.html",
       "narragansett.html",
-      "pabstapa.html"
+      "pabstapa.html",
+      "budlightplatinum.html"
     ];
   }
 }
