@@ -7,7 +7,8 @@ export class PublishedViews {
       "index.html",
       "about.html",
        "favoritebeers.html",
-       "contact.html"
+       "contact.html",
+       "reviews.html"
      ];
     this.reviews = [
       "coronafamiliar.html",
