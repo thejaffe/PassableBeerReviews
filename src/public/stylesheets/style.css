@@ -776,9 +776,6 @@ footer p {
 
   @media only screen and (min-width: 1140px) {
     article {grid-template-columns: 3fr 6fr 2fr;}
-
-    /* #mid-home-panel {
-      justify-content: center;
-    } */
+    .inline-ul {max-width: 760px; padding: 0 4em;}
   }
 } /*END Grid Support Query */
