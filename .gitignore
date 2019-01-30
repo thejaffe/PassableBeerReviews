@@ -8,4 +8,12 @@ tsconfig.json
 *.pem
 robots.txt
 sitemap.xml
+errors.htm
+log.htm
+rss.xml
+rss.xml.gz
+sitemap.htm
+sitemap.txt
+sitemap.xml.gz
 BingSiteAuth.xml
+*.DS_Store
