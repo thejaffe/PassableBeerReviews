@@ -15,10 +15,12 @@ router.get("/", (req: Request, res: Response) => res.render("index.html"));
 
 // article routes
 router.get("/:article", (req: Request, res: Response) => {
-  if (publishedViews.articles.indexOf(req.params.article) === -1) {
-    throw new Error("Cannot Get requested page");
-  } else {
+  if (publishedViews.articles.indexOf(req.params.article) !== -1) {
     res.render(req.params.article);
+  } else if (publishedViews.reviews.indexOf(req.params.article) !== -1) {
+    res.redirect(`/reviews/${req.params.article}`);
+  } else {
+    throw new Error("Cannot Get request page");
   }
 });
 
