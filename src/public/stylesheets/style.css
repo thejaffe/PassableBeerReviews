@@ -205,21 +205,24 @@ a {color: white;}
 .beer-circle:hover {background-color: var(--blue, #102C73);}
 
 .one {
-  background-image: url("../images/blplatinum.png");
+  background-image: url("../images/nattydaddy.png");
 }
 .two {
-  background-image: url("../images/hamms.png");
+  background-image: url("../images/blplatinum.png");
 }
 .three {
-  background-image: url("../images/coronafamiliar.png");
+  background-image: url("../images/hamms.png");
 }
 .four {
-  background-image: url("../images/fosters.png");
+  background-image: url("../images/coronafamiliar.png");
 }
 .five {
-  background-image: url("../images/narragansett.png");
+  background-image: url("../images/fosters.png");
 }
 .six {
+  background-image: url("../images/narragansett.png");
+}
+.seven {
   background-image: url("../images/pabstapacan.png");
 }
 
