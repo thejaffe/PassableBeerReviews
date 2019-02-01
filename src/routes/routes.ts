@@ -15,9 +15,9 @@ router.get("/", (req: Request, res: Response) => res.render("index.html"));
 
 // article routes
 router.get("/:article", (req: Request, res: Response) => {
-  if (publishedViews.articles.indexOf(req.params.article) !== -1) {
+  if (publishedViews.validArticle(req.params.article)) {
     res.render(req.params.article);
-  } else if (publishedViews.reviews.indexOf(req.params.article) !== -1) {
+  } else if (publishedViews.validReview(req.params.article)) {
     res.redirect(`/reviews/${req.params.article}`);
   } else {
     throw new Error("Cannot Get request page");
@@ -26,10 +26,10 @@ router.get("/:article", (req: Request, res: Response) => {
 
 // beer review routes
 router.get("/reviews/:beer", (req: Request, res: Response) => {
-  if (publishedViews.reviews.indexOf(req.params.beer) === -1) {
-    throw new Error("Cannot Get requested page");
-  } else {
+  if (publishedViews.validReview(req.params.beer)) {
     res.render(req.params.beer);
+  } else {
+    throw new Error("Cannot Get requested page");
   }
 });
 
