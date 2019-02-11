@@ -1,0 +1,8 @@
+@keyframes pour {
+      0% {
+        transform: translateY($pour-height);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }

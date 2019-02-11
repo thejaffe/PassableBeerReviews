@@ -1,0 +1,117 @@
+#homebody {
+  background: url("../images/background.jpg") center top / cover no-repeat fixed;
+}
+
+figure img, #suggestion-box > * {box-shadow: $box-shadow}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+  font-size: 0.85em;
+  margin: 1em;
+  padding-bottom: 1em;
+  border-bottom: 3px solid $gray;
+}
+
+#top-home-panel {
+  background: linear-gradient(
+    rgba(160, 82, 45, 0.3),
+  	rgba(160, 82, 45, 0.3)
+    ),
+    url("../images/homeback.jpg") center / cover no-repeat;
+  background-size: cover;
+  padding-bottom: 1em;
+
+  h2 {
+    font-family: var(--ff-cursive, 'Damion', cursive);
+    font-weight: 400;
+    color: white;
+  }
+
+  @media only screen and (min-width: 655px) {
+    height: 100vh;
+    height: calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @supports (display: grid) {
+      height: calc(100vh - 140px);
+    }
+  }
+
+}
+
+.home {
+  margin-top: 3em;
+
+  @media only screen and (min-width: 655px) {
+    margin-top: auto;
+  }
+}
+
+.home-circle {background-color: rgba(196, 196, 196, 0.3);}
+
+.home-circle:hover {
+  background-color: rgba(196, 196, 196, 0.6);
+  border-color: $blue;
+}
+
+#mid-home-panel {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  p {
+    flex: 1 1 500px;
+    flex-grow: 1;
+    flex-basis: 500px;
+    align-self: center;
+
+    @media only screen and (min-width: 790px) {
+      font-size: 1.1em;
+      max-width: 755px;
+    }
+
+    @media only screen and (min-width: 1100px) {
+      font-size: 1.2em;
+      max-width: 820px;
+    }
+  }
+
+  figure {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    margin-right: 1em;
+    align-self: flex-start;
+  }
+}
+
+#suggestion-box {
+
+  @media only screen and (min-width: 1028px) {
+    max-width: 1000px;
+    margin: 1em auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    form {
+      margin: 0 0 0 1em;
+      flex-grow: 1;
+    }
+  }
+
+  img {
+    display: none;
+
+    @media only screen and (min-width: 1028px) {
+      display: block;
+      max-height: 417px;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+}

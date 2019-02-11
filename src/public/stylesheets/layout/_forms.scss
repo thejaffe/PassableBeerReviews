@@ -1,0 +1,66 @@
+form {
+	padding: 2em;
+	width: 100%;
+	margin: 0 auto;
+	background-color: $blue;
+	color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+form label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;}
+
+form > * {max-width: 37.5em;}
+
+textarea {height: 75px; resize: none;}
+
+input[type=text]{height: 36px;}
+
+.label-text, .textarea-text {
+  display: block;
+  color: gray;
+  cursor: text;
+  transition: all 0.4s ease;
+}
+
+.label-text {transform: translateY(-34px);}
+
+.textarea-text {transform: translateY(-55px);}
+
+input, textarea {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: var(--border-radius, 5px);
+    margin: 0.5em 0;
+}
+
+input:focus ~ .label-text, input:valid ~ .label-text {
+  transform: translateY(-62px);
+  color: white;
+}
+
+textarea:focus ~ .textarea-text, textarea:valid ~ .textarea-text {
+  transform: translateY(-102px);
+  color: white;
+}
+
+input[type=submit] {
+		font-size: 1em;
+		font-weight: bold;
+    background-color: var(--red, #C5091F);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {color: var(--blue, #102C73);}

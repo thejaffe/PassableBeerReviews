@@ -1,0 +1,95 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 2.5em;
+  width: 100%;
+  background-color: $red;
+  z-index: 1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5em;
+
+  @supports (display: grid) {
+    @media only screen and (min-width: 655px) {
+      position: static;
+      justify-content: center;
+    }
+  }
+
+  p {
+    font-size: 0.75em;
+    font-style: italic;
+    padding: 0;
+  }
+}
+
+/* allows nav button to gain focus, making it tabbable */
+#bottomnav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.fa-beer {
+  height: 2em;
+  width: 2em;
+}
+
+.bottomnav {
+  position: absolute;
+  bottom: 2.5em;
+  right: 0;
+  width: 100%;
+  background: $red;
+  transform: scale(1, 0);
+  transform-origin: bottom;
+  transition: transform 500ms ease-in-out;
+  text-align: right;
+
+  @supports (display: grid) {
+    @media only screen and (min-width: 655px) {
+      display: none;
+    }
+  }
+
+  a {
+    font-size: 1.75em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  a:hover {
+    color: $blue;
+  }
+
+  li {
+    padding: 0.75em;
+  }
+}
+
+.bottomnav-toggle-label {
+  display: flex;
+  align-items: center;
+
+  @supports (display: grid) {
+    @media only screen and (min-width: 655px) {
+      display: none;
+    }
+  }
+}
+
+.bottomnav-toggle-label:hover {
+  color: $blue;
+}
+
+#bottomnav-toggle:checked ~ .bottomnav {
+  transform: scale(1,1);
+}
+
+#bottomnav-toggle:checked ~ .bottomnav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}

@@ -18,9 +18,12 @@ node_modules/
 
 # typescript files
 *.ts
+tsconfig.json
 tslint.json
 /src
 
-// unneeded at the moment
+# unneeded at the moment
 *.crt
 *.key
+
+gulpfile.js

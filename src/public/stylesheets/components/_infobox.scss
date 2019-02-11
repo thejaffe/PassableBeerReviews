@@ -1,0 +1,94 @@
+.infobox {
+  overflow: hidden;
+  transition: max-height 700ms ease-in-out;
+  max-height: 0;
+  color: white;
+  background-color: var(--blue, #102C73);
+  border-radius: var(--border-radius, 5px);
+  width: 85%;
+  margin: 0 auto 1em auto;
+  padding: 0;
+
+  @supports (display: grid) {
+    @media only screen and (min-width: 655px) {
+      grid-area: inf;
+      overflow: auto;
+      color: black;
+      background: none;
+      width: 100%;
+      max-height: none;
+      background: url("../images/background.jpg") center top no-repeat;
+      background-size: contain;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    @media only screen and (min-width: 960px) {
+      grid-area: 2 / 2 / 2 / 5;
+    }
+  }
+
+  li:before {
+    @supports (display: grid) {
+      @media only screen and (min-width: 655px) {
+        content: '';
+        display: inline-block;
+        height: 1.5em;
+        width: 1.5em;
+        background: url("../images/beermug.svg") no-repeat;
+        background-size: contain;
+        padding-left: 2em;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+#info-toggle {
+  display: none;
+}
+
+#info-toggle-label {
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+  margin: 0 auto .3em auto;
+  font-size: 1.5em;
+  color: white;
+  background-color: var(--blue, #102C73);
+  width: 85%;
+  border-radius: var(--border-radius, 5px);
+
+  @supports (display: grid) {
+    @media only screen and (min-width: 655px) {
+      display: none;
+    }
+  }
+}
+
+#info-toggle-label:before {
+  content: '';
+  display: inline-block;
+  height: 1.25em;
+  width: 1.25em;
+  background: url("../images/white-beermug.svg") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+
+  vertical-align: middle;
+  transition: transform .4s ease-out;
+}
+
+#info-toggle:checked ~ .infobox {
+  max-height: 1000px;
+  border-radius: var(--border-radius, 5px);
+}
+#info-toggle:checked ~ label::before {
+  transform: rotate(-90deg) translate(5px);
+}
+
+.infobox li {
+  padding: 0.5em 1em;
+  line-height: 1.4;
+}
