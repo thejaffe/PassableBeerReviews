@@ -18,6 +18,7 @@ class App {
 
   private config(): void {
     this.app.use(helmet());
+    this.app.use(compression());
     this.app.set("views", __dirname + "/views");
     this.app.set("view engine", "ejs");
     this.app.engine("html", ejs.renderFile);
@@ -25,7 +26,6 @@ class App {
     this.app.use(favicon(__dirname + "/public/images/favicon.ico"));
 
     this.app.use(bodyParser.urlencoded({ extended: false }));
-    this.app.use(compression());
 
     this.app.use(Routes);
     this.app.use(errorHandler);
