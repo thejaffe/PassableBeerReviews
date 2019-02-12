@@ -25,5 +25,7 @@ tslint.json
 # unneeded at the moment
 *.crt
 *.key
+*.env
+.DS_STORE
 
 gulpfile.js

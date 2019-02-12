@@ -1,11 +1,12 @@
 body {
   font: 100% $font-family;
+  line-height: 1;
 }
 
 p {
   padding: 0 2em 1em 2em;
   line-height: 1.4;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 strong, h1, h2, h3 {
@@ -88,6 +89,10 @@ p a, .ratings a, article li a, input[type=submit] {
   margin: 0 auto 1em auto;
   list-style-type: disc;
   line-height: 1.4;
+
+  li {
+    opacity: 0.9;
+  }
 }
 
 ol {
