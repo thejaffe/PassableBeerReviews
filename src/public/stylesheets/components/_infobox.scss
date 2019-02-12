@@ -3,8 +3,8 @@
   transition: max-height 700ms ease-in-out;
   max-height: 0;
   color: white;
-  background-color: var(--blue, #102C73);
-  border-radius: var(--border-radius, 5px);
+  background-color: $blue;
+  border-radius: $border-radius;
   width: 85%;
   margin: 0 auto 1em auto;
   padding: 0;
@@ -56,9 +56,9 @@
   margin: 0 auto .3em auto;
   font-size: 1.5em;
   color: white;
-  background-color: var(--blue, #102C73);
+  background-color: $blue;
   width: 85%;
-  border-radius: var(--border-radius, 5px);
+  border-radius: $border-radius;
 
   @supports (display: grid) {
     @media only screen and (min-width: 655px) {
@@ -82,7 +82,7 @@
 
 #info-toggle:checked ~ .infobox {
   max-height: 1000px;
-  border-radius: var(--border-radius, 5px);
+  border-radius: $border-radius;
 }
 #info-toggle:checked ~ label::before {
   transform: rotate(-90deg) translate(5px);

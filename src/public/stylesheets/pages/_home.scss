@@ -23,7 +23,7 @@ figcaption {
   padding-bottom: 1em;
 
   h2 {
-    font-family: var(--ff-cursive, 'Damion', cursive);
+    font-family: $font-cursive;
     font-weight: 400;
     color: white;
   }
