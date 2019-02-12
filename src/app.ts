@@ -1,5 +1,4 @@
 import bodyParser from "body-parser";
-import compression from "compression";
 import ejs from "ejs";
 import express from "express";
 import helmet from "helmet";
@@ -18,7 +17,6 @@ class App {
 
   private config(): void {
     this.app.use(helmet());
-    this.app.use(compression());
     this.app.set("views", __dirname + "/views");
     this.app.set("view engine", "ejs");
     this.app.engine("html", ejs.renderFile);
