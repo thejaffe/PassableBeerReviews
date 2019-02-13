@@ -20,7 +20,8 @@ export class PublishedViews {
       "narragansett.html",
       "pabstapa.html",
       "budlightplatinum.html",
-      "nattydaddy.html"
+      "nattydaddy.html",
+      "fosterspremiumale.html"
     ];
   }
 
