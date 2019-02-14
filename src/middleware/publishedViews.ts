@@ -11,7 +11,9 @@ export class PublishedViews {
        "favoritebeers.html",
        "contact.html",
        "reviews.html",
-       "adjuncts.html"
+       "adjuncts.html",
+       "valentine.html",
+       "specialvalentine.html"
      ];
     this.reviews = [
       "coronafamiliar.html",
