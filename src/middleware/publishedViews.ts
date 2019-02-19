@@ -13,7 +13,6 @@ export class PublishedViews {
        "reviews.html",
        "adjuncts.html",
        "valentine.html",
-       "specialvalentine.html"
      ];
     this.reviews = [
       "coronafamiliar.html",
@@ -23,7 +22,8 @@ export class PublishedViews {
       "pabstapa.html",
       "budlightplatinum.html",
       "nattydaddy.html",
-      "fosterspremiumale.html"
+      "fosterspremiumale.html",
+      "moosehead.html"
     ];
   }
 

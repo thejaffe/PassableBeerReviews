@@ -35,7 +35,7 @@ export class Mail implements MailData {    public isMultiple?: boolean;
       const lastName = sanitize(req.body.last);
       const email = sanitize(req.body.email);
 
-      this.from = "server@passablebeers.com";
+      this.from = "beersuggestions@passablebeers.com";
       this.replyTo = email;
       this.subject = `Beer Suggestion from ${ firstName + " " + lastName }`;
       this.text = sanitize(req.body.suggestion);

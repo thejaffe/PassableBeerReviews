@@ -1,0 +1,76 @@
+<% include partials/boilerplate %>
+
+    <meta name="description" content="This is a story about how a sweatshirt, long ago discarded, led to a beer review." />
+    <meta name="keywords" content="beer, reviews, moosehead" />
+
+    <meta property="og:title" content="Review — Moosehead Lager">
+    <meta property="og:description" content="This is a story about how a sweatshirt, long ago discarded, led to a beer review.">
+    <meta property="og:image" content="https://passablebeers.com/images/moosehead.png">
+    <meta property="og:url" content="https://passablebeers.com/reviews/moosehead.html">
+    <meta property="og:site_name" content="Passable Beer Reviews">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="A bottle of Moosehead Lager">
+
+    <title>Review — Moosehead Lager</title>
+
+  </head>
+
+  <body>
+    <% include partials/header %>
+
+    <article>
+
+      <h1>Moosehead Lager</h1>
+
+      <img class="bottle" src="/images/moosehead.png" alt="A bottle of Moosehead Lager.">
+      <hr />
+
+      <p>This is a story about how a sweatshirt, long ago discarded, led to a beer review. I don’t know why dad’s old Moosehead Lager sweatshirt still sticks out in my mind after all these years. I cannot remember my father’s wardrobe in great detail, but I remember that old Moosehead beer logo sweatshirt he had. Maybe it’s because that sweatshirt hung around f o r e v e r, slowly morphing from everyday wear, to work shirt, to cleaning rag.</p>
+
+      <p>The shirt dates back to the first house I remember living in, making Moosehead the first beer I can remember. For the longest time, I didn’t even know it was an actual beer. Given the logo and its relative absence from store shelves, I half-assumed it was a novelty — another fine fake product from Spencer’s Gifts or some such.</p>
+
+      <p>Moosehead exited my life for the next few *ahem* decades, until I saw it in my local grocery store a few weeks ago. I started laughing when I saw it, told my wife the sweatshirt story, and made an addition to the future review list.</p>
+
+      <input id="info-toggle" type="checkbox">
+      <label id="info-toggle-label" for="info-toggle">Beer Stats & Info</label>
+      <aside class="infobox">
+        <ul>
+          <li><strong>Brewed by: </strong>Moosehead Breweries Ltd.</li>
+          <li><strong>Style: </strong>Pale Lager</li>
+          <li><strong>ABV: </strong>5.0%</li>
+          <li><strong>Commercial Description: </strong>"Moosehead Lager is a refreshing, light-bodied golden lager made by Moosehead Breweries. This premium lager walks a delicate balance between malt sweetness and hop bitterness, and is made using only quality ingredients including 100% Canadian barley malt and naturally pure Spruce Lake water."</li>
+          <li><strong>A Woman's Perspective: </strong>"Eh. It's fine. It's probably OK when it's ice cold. I don't think I'd want a whole one though."</li>
+          <li><strong>Is it Passable Beer?: </strong>If you can find it, it's certainly passable enough to try.</li>
+        </ul>
+      </aside>
+
+      <p>Until a few weeks ago I had assumed that Moosehead Lager was either A) not a real beer or B) yet another regional brand bought out long ago. It's also packaged in the always suspect green bottle, so I took my first sip with a “brewed with an actual Moose’s head” joke already in mind.</p>
+
+      <p>Happily, Moosehead doesn’t have as much of the light-induced flaw as its green-bottled brethren. It has just enough funk to be interesting, but not enough to overpower everything else. Although the usual Passable Beer caveats — it isn’t <em>that</em> good, the aftertaste is a little sweet, and it should be consumed ice cold — apply, I quite enjoyed my Moosehead six-pack. I’m also pleased to report that it pairs well with tacos.</p>
+
+      <p>Speaking of food and beverage from Mexico, Moosehead reminds me a little of Dos Equis lager. The Canadian brew is probably the better of the two because I didn’t feel the need to chuck a lime in the bottle.</p>
+
+      <p><a href="https://moosehead.ca/">Moosehead</a>, located in one of Canada’s smallest provinces (New Brunswick), claims to be the last major Canadian brewery owned by Canadians. Given its status as a pale lager outside the AB InBev/MillerCoors machine you may have a hard time finding Moosehead, but if you happen across it and are looking for a half-decent <a href="/about.html">Yard</a> Beer you should give it a try. At the very least, it’s a pleasantly Passable beer from someone other than the aforementioned Big Beer hydra.</p>
+
+      <p>Now, if you’ll excuse me, I have an overpriced sweatshirt to find and purchase.</p>
+
+      <h3><span class="firstletter">O</span>ther Ratings</h3>
+
+      <aside class="ratings">
+        <div><a href="https://www.ratebeer.com/beer/moosehead-lager/203/">RateBeer:</a>2.25/5</div><br />
+        <div><a href="https://www.beeradvocate.com/beer/profile/379/1053/">Beeradvocate:</a>3.05/5</div>
+      </aside>
+
+      <h3 class="beer-links-head"><span class="firstletter">R</span>ecent Reviews</h3>
+
+      <aside class="beer-links bottom">
+        <% include partials/beerlinks %>
+      </aside>
+
+    </article>
+
+    <% include partials/footer %>
+    <script src="/js/pagesize.js"></script>
+    <script src="/js/active-class_review.js"></script>
+  </body>
+</html>
