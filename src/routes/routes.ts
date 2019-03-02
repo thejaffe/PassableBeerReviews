@@ -15,22 +15,30 @@ router.get("/", (req: Request, res: Response) => res.render("index.html"));
 
 // article routes
 router.get("/:article", (req: Request, res: Response) => {
-  if (publishedViews.validArticle(req.params.article)) {
-    res.render(req.params.article);
-  } else if (publishedViews.validReview(req.params.article)) {
-    res.redirect(`/reviews/${req.params.article}`);
+
+  const route = publishedViews.routeGenerator(req.params.article);
+
+  if (publishedViews.validArticle(route)) {
+    res.render(route);
+  } else if (publishedViews.validReview(route)) {
+    res.redirect(`/reviews/${route}`);
   } else {
     throw new Error("Cannot Get request page");
   }
+
 });
 
 // beer review routes
 router.get("/reviews/:beer", (req: Request, res: Response) => {
-  if (publishedViews.validReview(req.params.beer)) {
-    res.render(req.params.beer);
+
+  const route = publishedViews.routeGenerator(req.params.beer);
+
+  if (publishedViews.validReview(route)) {
+    res.render(route);
   } else {
     throw new Error("Cannot Get requested page");
   }
+
 });
 
 // send email route

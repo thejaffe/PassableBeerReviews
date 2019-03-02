@@ -27,6 +27,14 @@ export class PublishedViews {
     ];
   }
 
+  public routeGenerator(param: string): string {
+    if (param.split(".").length === 1) {
+      return param + ".html";
+    } else {
+      return param;
+    }
+  }
+
   public validArticle(param: string): boolean {
     return this.articles.indexOf(param) !== -1;
   }
