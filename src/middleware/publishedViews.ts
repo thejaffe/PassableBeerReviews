@@ -23,7 +23,8 @@ export class PublishedViews {
       "budlightplatinum.html",
       "nattydaddy.html",
       "fosterspremiumale.html",
-      "moosehead.html"
+      "moosehead.html",
+      "budcopper.html"
     ];
   }
 
