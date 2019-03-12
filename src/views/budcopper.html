@@ -68,7 +68,30 @@
     </article>
 
     <% include partials/footer %>
-    <script src="/js/pagesize.js"></script>
-    <script src="/js/active-class_review.js"></script>
+
+    <script type=text/javascript>
+
+      // Set animation height
+      if (document.body.scrollWidth >= 960) {
+        document.documentElement.style.setProperty('--pour-height',
+                                        -(document.body.scrollHeight) + "px");
+      }
+
+      // Add active class to current page
+      var elements = document.getElementsByClassName("beer-circle");
+      var listLength = elements.length;
+      var current = window.location.pathname.split("/")[2];
+      if (current.split(".")[1] !== "html") {
+        current += ".html";
+      }
+
+      for (let i = 0; i < listLength; i++) {
+        if (elements[i].toString().split("/")[4] === current) {
+          elements[i].classList.add("active");
+          break;
+        }
+      }
+
+    </script>
   </body>
 </html>

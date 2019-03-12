@@ -52,3 +52,7 @@ img {
   display: block;
   max-width: 100%;
 }
+
+:root {
+	--pour-height: -400vh; //fallback if script doesn't run
+}

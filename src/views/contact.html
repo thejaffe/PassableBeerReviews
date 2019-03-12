@@ -46,6 +46,23 @@
     </aside>
 
     <% include partials/footer %>
-    <script src="/js/active-class_article.js"></script>
+    <script type=text/javascript>
+
+      // Add active class to current page
+      var elements = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
+      var listLength = elements.length;
+      var current = window.location.pathname.split("/")[1];
+      if (current.split(".")[1] !== "html") {
+        current += ".html";
+      }
+
+      for (let i = 0; i < listLength; i++) {
+        if (elements[i].toString().split("/")[3] === current) {
+          elements[i].classList.add("active");
+          break;
+        }
+      }
+
+    </script>
   </body>
 </html>
