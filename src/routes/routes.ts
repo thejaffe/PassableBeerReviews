@@ -50,6 +50,7 @@ router.post("/contact", asyncWrapper(async (req: Request, res: Response) => {
   res.render("success.html");
 }));
 
+// Error routes
 router.get("*", asyncWrapper(async (req: Request, res: Response) => {
 
   await new Promise((resolve) => setTimeout(() => resolve(), 50));
