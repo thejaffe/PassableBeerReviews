@@ -24,7 +24,8 @@ export class PublishedViews {
       "nattydaddy.html",
       "fosterspremiumale.html",
       "moosehead.html",
-      "budcopper.html"
+      "budcopper.html",
+      "modeloespecial.html"
     ];
   }
 
