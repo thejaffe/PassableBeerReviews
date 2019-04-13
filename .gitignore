@@ -18,3 +18,5 @@ sitemap.xml.gz
 BingSiteAuth.xml
 *.DS_Store
 *.vscode
+generator.py
+template.html

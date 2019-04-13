@@ -1,48 +1,14 @@
-.modeloespecial {
-  background-image: url("../images/modeloespecial.png");
-}
-.budcopper {
-  background-image: url("../images/budcopper.png");
-}
-.moosehead {
-  background-image: url("../images/moosehead.png");
-}
-.fosterspremium {
-  background-image: url("../images/fosterspremium.png");
-}
-.nattydaddy {
-  background-image: url("../images/nattydaddy.png");
-}
-.budlightplatinum {
-  background-image: url("../images/blplatinum.png");
-}
-.hamms {
-  background-image: url("../images/hamms.png");
-}
-.coronafamiliar {
-  background-image: url("../images/coronafamiliar.png");
-}
-.fosters {
-  background-image: url("../images/fosters.png");
-}
-.narragansett {
-  background-image: url("../images/narragansett.png");
-}
-.pabstapa {
-  background-image: url("../images/pabstapacan.png");
-}
-
 article {
   @supports (display: grid) {
     @media only screen and (min-width: 655px) {
-       display: grid;
-       grid-template-columns: 2fr 5fr;
-       align-items: center;
-       max-width: 670px;
-       margin: 0 auto;
-       grid-template-areas:
-       "hdl hdl"
-       "img inf"
+      display: grid;
+      grid-template-columns: 2fr 5fr;
+      align-items: center;
+      max-width: 670px;
+      margin: 0 auto;
+      grid-template-areas:
+        "hdl hdl"
+        "img inf";
     }
 
     @media only screen and (min-width: 960px) {
@@ -68,7 +34,7 @@ article {
   h1 {
     @supports (display: grid) {
       @media only screen and (min-width: 655px) {
-         grid-area: hdl;
+        grid-area: hdl;
       }
 
       @media only screen and (min-width: 960px) {
@@ -80,7 +46,7 @@ article {
   h3 {
     @supports (display: grid) {
       @media only screen and (min-width: 655px) {
-         grid-column: 1 / 3;
+        grid-column: 1 / 3;
       }
 
       @media only screen and (min-width: 960px) {
@@ -91,11 +57,11 @@ article {
 
   img {
     float: left;
-    margin: 0 1.0em 0.25em 0;
+    margin: 0 1em 0.25em 0;
 
     @supports (display: grid) {
       @media only screen and (min-width: 655px) {
-         grid-area: img;
+        grid-area: img;
       }
 
       @media only screen and (min-width: 960px) {
@@ -107,7 +73,7 @@ article {
   p {
     @supports (display: grid) {
       @media only screen and (min-width: 655px) {
-         grid-column: 1 / 3;
+        grid-column: 1 / 3;
       }
 
       @media only screen and (min-width: 960px) {
@@ -132,16 +98,43 @@ article {
       }
     }
   }
-
 }
 
 .bottle {
-  -webkit-shape-outside: polygon(60.70% 1.06%, 62.08% 9.55%, 66.09% 22.74%, 66.26% 42.80%, 76.07% 50.16%, 77.06% 65.52%, 76.83% 88.96%, 73.77% 97.53%, 58.21% 100.65%, 42.05% 100.79%, 23.16% 98.11%, 21.76% 89.29%, 33.05% 1.13%);
-  shape-outside: polygon(60.70% 1.06%, 62.08% 9.55%, 66.09% 22.74%, 66.26% 42.80%, 76.07% 50.16%, 77.06% 65.52%, 76.83% 88.96%, 73.77% 97.53%, 58.21% 100.65%, 42.05% 100.79%, 23.16% 98.11%, 21.76% 89.29%, 33.05% 1.13%);
+  -webkit-shape-outside: polygon(
+    60.7% 1.06%,
+    62.08% 9.55%,
+    66.09% 22.74%,
+    66.26% 42.8%,
+    76.07% 50.16%,
+    77.06% 65.52%,
+    76.83% 88.96%,
+    73.77% 97.53%,
+    58.21% 100.65%,
+    42.05% 100.79%,
+    23.16% 98.11%,
+    21.76% 89.29%,
+    33.05% 1.13%
+  );
+  shape-outside: polygon(
+    60.7% 1.06%,
+    62.08% 9.55%,
+    66.09% 22.74%,
+    66.26% 42.8%,
+    76.07% 50.16%,
+    77.06% 65.52%,
+    76.83% 88.96%,
+    73.77% 97.53%,
+    58.21% 100.65%,
+    42.05% 100.79%,
+    23.16% 98.11%,
+    21.76% 89.29%,
+    33.05% 1.13%
+  );
 
   @supports (display: grid) {
     @media only screen and (min-width: 655px) {
-       width: 100%;
+      width: 100%;
     }
   }
 }
@@ -152,8 +145,8 @@ article {
 
   @supports (display: grid) {
     @media only screen and (min-width: 655px) {
-       width: 100%;
-       margin: 0 1.5em 1.5em 0;
+      width: 100%;
+      margin: 0 1.5em 1.5em 0;
     }
 
     @media only screen and (min-width: 960px) {
@@ -174,7 +167,7 @@ article {
 
   @supports (display: grid) {
     @media only screen and (min-width: 655px) {
-       grid-column: 1 / 3;
+      grid-column: 1 / 3;
     }
 
     @media only screen and (min-width: 960px) {
@@ -192,4 +185,48 @@ article {
     display: flex;
     justify-content: space-between;
   }
+}
+
+.modeloespecial {
+  background-image: url("../images/modeloespecial.png");
+}
+
+.budcopper {
+  background-image: url("../images/budcopper.png");
+}
+
+.moosehead {
+  background-image: url("../images/moosehead.png");
+}
+
+.fosterspremium {
+  background-image: url("../images/fosterspremium.png");
+}
+
+.nattydaddy {
+  background-image: url("../images/nattydaddy.png");
+}
+
+.budlightplatinum {
+  background-image: url("../images/blplatinum.png");
+}
+
+.hamms {
+  background-image: url("../images/hamms.png");
+}
+
+.coronafamiliar {
+  background-image: url("../images/coronafamiliar.png");
+}
+
+.fosters {
+  background-image: url("../images/fosters.png");
+}
+
+.narragansett {
+  background-image: url("../images/narragansett.png");
+}
+
+.pabstapa {
+  background-image: url("../images/pabstapacan.png");
 }

@@ -4,7 +4,7 @@ import express from "express";
 import helmet from "helmet";
 import favicon from "serve-favicon";
 
-import { errorHandler} from "./middleware/errorHandler";
+import { errorHandler } from "./middleware/errorHandler";
 import { Routes } from "./routes/routes";
 
 class App {

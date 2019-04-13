@@ -29,3 +29,5 @@ tslint.json
 .DS_STORE
 
 gulpfile.js
+generator.py
+template.html

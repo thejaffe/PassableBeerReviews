@@ -8,13 +8,22 @@ export class PublishedViews {
     this.articles = [
       "index.html",
       "about.html",
-       "favoritebeers.html",
-       "contact.html",
-       "reviews.html",
-       "adjuncts.html",
-       "valentine.html",
-     ];
+      "favoritebeers.html",
+      "contact.html",
+      "reviews.html",
+      "adjuncts.html",
+      "valentine.html"
+    ];
     this.reviews = [
+      "highlife.html",
+      "highlife.html",
+      "asdf.html",
+      "asdf.html",
+      "asdf.html",
+      "asdf.html",
+      "highlife.html",
+      "asdf.html",
+      "highlife.html",
       "coronafamiliar.html",
       "fosters.html",
       "hamms.html",
