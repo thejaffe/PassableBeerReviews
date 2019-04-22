@@ -12,6 +12,8 @@
     "build": "npm-run-all clean lint tsc compile-sass copy-assets",
     "dev:start": "npm-run-all build start",
     "dev": "nodemon --watch src -e ts,html,scss --exec npm run dev:start",
+    "debug": "npm-run-all build start-debug",
+    "start-debug": "node --inspect .",
     "prod": "nodemon ./dist/index.js",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,7 +32,6 @@
   "dependencies": {
     "@sendgrid/mail": "^6.3.1",
     "body-parser": "^1.18.3",
-    "dotenv": "^7.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "helmet": "^3.16.0",
@@ -40,17 +41,16 @@
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
     "@types/compression": "0.0.36",
-    "@types/dotenv": "^6.1.1",
     "@types/ejs": "^2.6.3",
     "@types/express": "^4.16.1",
     "@types/helmet": "0.0.43",
-    "@types/node": "^11.13.4",
+    "@types/node": "^11.13.6",
     "@types/sanitize-html": "^1.18.3",
     "@types/serve-favicon": "^2.2.30",
-    "@types/shelljs": "^0.8.4",
+    "@types/shelljs": "^0.8.5",
     "del": "^4.1.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-csso": "^3.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "^4.0.2",
@@ -61,8 +61,8 @@
     "npm-run-all": "^4.1.5",
     "rimraf": "^2.6.3",
     "shelljs": "^0.8.3",
-    "ts-node": "^8.0.3",
-    "tslint": "^5.15.0",
-    "typescript": "^3.4.3"
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.4"
   }
 }

@@ -31,3 +31,4 @@ tslint.json
 gulpfile.js
 generator.py
 template.html
+*.vscode
