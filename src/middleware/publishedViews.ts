@@ -16,15 +16,6 @@ export class PublishedViews {
     ];
     this.reviews = [
       "highlife.html",
-      "highlife.html",
-      "highlife.html",
-      "asdf.html",
-      "asdf.html",
-      "asdf.html",
-      "asdf.html",
-      "highlife.html",
-      "asdf.html",
-      "highlife.html",
       "coronafamiliar.html",
       "fosters.html",
       "hamms.html",
