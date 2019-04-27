@@ -1,0 +1,96 @@
+<% include partials/boilerplate %>
+
+    <meta name="description" content="High Life has a lot going for it beyond being decidedly not bad." />
+    <meta name="keywords" content="beer, reviews, miller high life" />
+
+    <meta property="og:title" content="Review — Miller High Life">
+    <meta property="og:description" content="High Life has a lot going for it beyond being decidedly not bad.">
+    <meta property="og:image" content="https://passablebeers.com/images/highlife.png">
+    <meta property="og:url" content="https://passablebeers.com/reviews/highlife.html">
+    <meta property="og:site_name" content="Passable Beer Reviews">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="A 7-ounce bottle of Miller High Life.">
+
+    <title>Review — Miller High Life</title>
+
+  </head>
+
+  <body>
+    <% include partials/header %>
+
+    <article>
+
+      <h1>Miller High Life</h1>
+
+      <img class="can" src="/images/highlife.png" alt="A 7-ounce bottle of Miller High Life.">
+      <hr />
+
+      <p>"Guys, you won't believe what I found," my friend said upon entering the basement for a BYOB poker night. He plopped a six-pack of Bud Light on the table and explained, "I found this six-pack of Bud Light for [some absurdly low price that I can't remember exactly]." Someone almost immediately noticed that he had purchased a cheap six-pack … of 7-oz. bottles. I'd love to tell you that we offered him some empathy and compassion, but that would be a lie. We roasted him that night, and more than a few times since, for the sin of purchasing tiny beers.</p>
+
+      <p>I've remembered this mistake and made sure to double-check when I come across suspiciously cheap beer, especially suspiciously cheap <a href="/about.html">Passable</a> Beer. Fool me once, Coronita, shame on you. This anti-small-bottle bias has long been my stance because there are few things I enjoy less than paying more per ounce for fewer overall ounces of beer. But after drinking a single 7-ounce Miller High Life for the purposes of review, I'm thinking I may have been wrong to dismiss the small bottle out of hand.</p>
+
+      <p>First, the tiny bottle allowed me to play my favorite game: Pretend I'm a Giant. I was also able to comfortably enjoy my High Life at a leisurely pace without worrying if I was going to finish it before it got warm. I'm not a huge fan of unnecessary government regulation, but the maximum size of a beer should be in proportion to its quality. Instead, the worst beers in the America can only be purchased 24 or 40 ounces at a time.</p>
+
+      <input id="info-toggle" type="checkbox">
+      <label id="info-toggle-label" for="info-toggle">Beer Stats & Info</label>
+      <aside class="infobox">
+        <ul>
+          <li><strong>Brewed by: </strong>MillerCoors</li>
+          <li><strong>Style: </strong>American Adjunct Lager</li>
+          <li><strong>ABV: </strong>4.6%</li>
+          <li><strong>Commercial Description: </strong>A favorite among bartenders, brewers, and beer lovers in general, Miller High Life was launched as Miller Brewing Company’s flagship beer in 1903. Its crisp, easy-drinking flavor is the epitome of the American lager category. True to its original recipe, it’s brewed with a proprietary blend of malted barley, Galena hops from the Pacific Northwest, and Miller yeast."</li>
+          <li><strong>A Woman's Perspective: </strong>"It's a lot better than I was expecting. Actually, that's pretty good."</li>
+          <li><strong>Is it Passable Beer?: </strong>The Champagne of Beers is true to its name.</li>
+        </ul>
+      </aside>
+
+      <p>High Life turned out to be way better than I remember. It's actually pretty good. The track record of clear-bottled beers is checkered, at best. But the High Life I had didn't taste light-blasted and skunky at all. Miller claims that this is because it developed "special light-stable Galena hops just for High Life." In my very limited search, I couldn't find anything to back this claim, but did find out that the regular Galena variety dates back only to 1968. Miller has been brewing High Life since 1903.</p>
+
+      <p>High Life has a lot going for it beyond being decidedly not bad. The packaging — from the <a href="https://www.millercoorsblog.com/trending/miller-high-life-girl-in-the-moon/">woman</a> in the crescent moon, to the <a href="https://images-mm.s3.amazonaws.com/Miller_High_Life_Redlogo_Black_Hat1_POP.jpg">logo</a> that looks perfect on a hat — are top notch. The tagline, "The Champagne of Beers", might be best beer nickname ever. It is utter nonsense in the best sense and it beats the pants off of "The King of Beers." Even the clear bottle works. High Life isn't hiding the distinct straw color of an American Lager. High Life has the good manners to let you know what you're getting into right up front.</a>
+
+      <p>The bad news is that being High in Life apparently also means High in Calories. But, let's be honest with ourselves and stipulate that if we're drinking a beer that mysteriously does not skunk when exposed to light, maybe the calorie count shouldn't be our biggest concern. So, be like Steve Winwood: Enjoy The Finer Things and get Back in the High Life Again. If you take exception to the previous sentence (as you should) please remember that I am, on occasions when I find tiny beers and tiny chairs, a literal giant.</p>
+
+      <h3><span class="firstletter">O</span>ther Ratings</h3>
+
+      <aside class="ratings">
+        <div><a href="https://www.ratebeer.com/beer/miller-high-life/407/">RateBeer:</a>1.68/5</div><br />
+        <div><a href="https://www.beeradvocate.com/beer/profile/105/580/">Beeradvocate:</a>2.7/5</div>
+      </aside>
+
+      <h3 class="beer-links-head"><span class="firstletter">R</span>ecent Reviews</h3>
+
+      <aside class="beer-links bottom">
+        <% include partials/beerlinks %>
+      </aside>
+
+    </article>
+
+    <% include partials/footer %>
+
+    <script>
+
+      // Set animation height
+      if (document.body.scrollWidth >= 960) {
+        document.documentElement.style.setProperty('--pour-height',
+                                        -(document.body.scrollHeight) + "px");
+      }
+
+      // Add active class to current page
+      var elements = document.getElementsByClassName("beer-circle");
+      var listLength = elements.length;
+      var current = window.location.pathname.split("/")[2];
+      if (current.split(".")[1] !== "html") {
+        current += ".html";
+      }
+
+      for (let i = 0; i < listLength; i++) {
+        if (elements[i].toString().split("/")[4] === current) {
+          elements[i].classList.add("active");
+          break;
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
