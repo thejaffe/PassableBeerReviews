@@ -12,7 +12,9 @@ export class PublishedViews {
       "contact.html",
       "reviews.html",
       "adjuncts.html",
-      "valentine.html"
+      "valentine.html",
+      "specialvalentine.html",
+      "mothersday.html"
     ];
     this.reviews = [
       "highlife.html",
