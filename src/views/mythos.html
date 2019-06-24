@@ -1,0 +1,98 @@
+<% include partials/boilerplate %>
+
+    <meta name="description" content="If anyone of any ethnicity showed up at my door with a giant wooden horse, I'd have some questions, but there's a huge gulf between a gyro and a soldier-filled stallion on wheels." />
+    <meta name="keywords" content="beer, reviews, mythos" />
+
+    <meta property="og:title" content="Review — Mythos">
+    <meta property="og:description" content="If anyone of any ethnicity showed up at my door with a giant wooden horse, I'd have some questions, but there's a huge gulf between a gyro and a soldier-filled stallion on wheels.">
+    <meta property="og:image" content="https://passablebeers.com/images/mythos.png">
+    <meta property="og:url" content="https://passablebeers.com/reviews/mythos.html">
+    <meta property="og:site_name" content="Passable Beer Reviews">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="A green bottle of Mythos Lager.">
+
+    <title>Review — Mythos</title>
+
+  </head>
+
+  <body>
+    <% include partials/header %>
+
+    <article>
+
+      <h1>Mythos</h1>
+
+      <img class="bottle" src="/images/mythos.png" alt="A green bottle of Mythos Lager.">
+      <hr />
+
+      <p>A Greek Orthodox Church just down the road from our house hosts a Greek Festival every summer. One year after seeing a sign advertising the event on the side of the road my wife suggested that we go. This was pre-kid and we've been every year since, so we've been at least six times.</p>
+
+      <p>I've never been one to beware of Greeks bearing gifts myself because presents are great. If anyone of any ethnicity showed up at my door with a giant wooden horse, I'd have some questions, but there's a huge gulf between a gyro and a soldier-filled stallion on wheels. The former is delicious, the latter is an ambush.</p>
+
+      <p>The annual Greek Festival has three things that make it worth returning to every year. The first and most important is the food. In addition to fresh gyros, there is a fine selection of pastries — hello, baklava — and the fries come covered in feta. Greek Fries are therefore superior to French Fries. The second festival highlight is the traditional music and dancing, which is both charming and wonderful entertainment for kids. The third is Mythos Lager.</p>
+
+      <input id="info-toggle" type="checkbox">
+      <label id="info-toggle-label" for="info-toggle">Beer Stats & Info</label>
+      <aside class="infobox">
+        <ul>
+          <li><strong>Brewed by: </strong>Olympic Brewery</li>
+          <li><strong>Style: </strong>Pale Lager</li>
+          <li><strong>ABV: </strong>5.0%</li>
+          <li><strong>Commercial Description: </strong>"Rich foam, bright blonde color and complex yet distinct flavors. Balanced body with fruity nuances and hop notes, with a slight sweetness and rich, long-lasting aftertaste make Mythos lager both enjoyable and refreshing."</li>
+          <li><strong>A Woman's Perspective: </strong>"It's passable. I'm going to drink it at Greek Fest when my other choice is a Bud Light."</li>
+          <li><strong>Is it Passable Beer?: </strong>Mythos is great… if you're at a Greek Festival/themed event.</li>
+        </ul>
+      </aside>
+
+      <p>The Greek Festival is the only place I encounter Mythos, although I never look hard for it in the store because Mythos tops out as a solid C on the taste scale. I look forward to my yearly two bottles of Mythos because when paired with tzatziki sauce on roast meat it tastes pretty good.</p>
+
+      <p>My wife was watching the kid in the bounce house this year when a stranger asked her what she was drinking. "Mythos," she said. "What's that?" he inquired further. "Oh, it's a Greek beer," she replied. "What's a Greek beer?" Understandably confused by the gentlemen's inability to parse "Greek beer", my wife stammered before someone else explained that Mythos is "like the Bud Light of Greece."</p>
+
+      <p>Mythos clears the beer industry's version of the <a href="https://en.wikipedia.org/wiki/Mendoza_Line">Mendoza</a> Line (Bud Light), making it perfectly passable. It has two other things going for it. One is the unicorn logo, which is either awesomely tacky or tackily awesome. The other is that the bottles come with tops that you pull off, like pulling the tab on a can. Honestly, they're so much better than twist-off caps I can't believe Bud or Miller haven't stolen them as their latest gimmick-du-jour. Beats the hell out of those stupid Vortex bottles or that Coors Light Cooler Box that fell apart instantly.</p>
+
+      <p>Final Grades — <strong>Greek Fest</strong>: A+; <strong>Mythos</strong>:  C but it bumps up to a B+ during Greek Fest; <strong>Guy confused by the phrase "Greek beer"</strong>:  F-.</p>
+
+      <h3><span class="firstletter">O</span>ther Ratings</h3>
+
+      <aside class="ratings">
+        <div><a href="https://www.ratebeer.com/beer/mythos/3949/">RateBeer:</a>2.08/5</div><br />
+        <div><a href="https://www.beeradvocate.com/beer/profile/1084/3245/">Beeradvocate:</a>2.7/5</div>
+      </aside>
+
+      <h3 class="beer-links-head"><span class="firstletter">R</span>ecent Reviews</h3>
+
+      <aside class="beer-links bottom">
+        <% include partials/beerlinks %>
+      </aside>
+
+    </article>
+
+    <% include partials/footer %>
+
+    <script>
+
+      // Set animation height
+      if (document.body.scrollWidth >= 960) {
+        document.documentElement.style.setProperty('--pour-height',
+                                        -(document.body.scrollHeight) + "px");
+      }
+
+      // Add active class to current page
+      var elements = document.getElementsByClassName("beer-circle");
+      var listLength = elements.length;
+      var current = window.location.pathname.split("/")[2];
+      if (current.split(".")[1] !== "html") {
+        current += ".html";
+      }
+
+      for (let i = 0; i < listLength; i++) {
+        if (elements[i].toString().split("/")[4] === current) {
+          elements[i].classList.add("active");
+          break;
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
