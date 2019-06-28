@@ -20,3 +20,4 @@ BingSiteAuth.xml
 *.vscode
 generator.py
 template.html
+/reviews
