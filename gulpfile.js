@@ -8,18 +8,6 @@ var sass = require("gulp-sass");
 var tsc = require("gulp-typescript");
 var uglify = require("gulp-uglify-es").default;
 
-const AUTOPREFIXER_BROWSERS = [
-  "ie >= 10",
-  "ie_mob >= 10",
-  "ff >= 30",
-  "chrome >= 34",
-  "safari >= 7",
-  "opera >= 23",
-  "ios >= 7",
-  "android >= 4.4",
-  "bb >= 10"
-];
-
 const tsOptions = {
   module: "commonjs",
   esModuleInterop: true,
@@ -47,7 +35,7 @@ const styles = done => {
         onError: console.error.bind(console, "Sass error:")
       })
     )
-    .pipe(autoprefixer({ browsers: AUTOPREFIXER_BROWSERS }))
+    .pipe(autoprefixer())
     .pipe(csso())
     .pipe(gulp.dest("./dist/public/stylesheets"));
   done();

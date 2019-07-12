@@ -1,6 +1,5 @@
 import { MailData } from "@sendgrid/helpers/classes/mail";
 import { Request } from "express";
-import sanitize from "sanitize-html";
 
 export class Mail implements MailData {    public isMultiple?: boolean;
     public substitutionWrappers?: string[];
@@ -31,14 +30,14 @@ export class Mail implements MailData {    public isMultiple?: boolean;
 
     // Constructor formats form request into MailData
     constructor(req: Request) {
-      const firstName = sanitize(req.body.first);
-      const lastName = sanitize(req.body.last);
-      const email = sanitize(req.body.email);
+      const firstName = req.body.first;
+      const lastName = req.body.last;
+      const email = req.body.email;
 
       this.from = "beersuggestions@passablebeers.com";
       this.replyTo = email;
       this.subject = `Beer Suggestion from ${ firstName + " " + lastName }`;
-      this.text = sanitize(req.body.suggestion);
+      this.text = req.body.suggestion;
       this.to = "passablebeers@gmail.com";
     }
 

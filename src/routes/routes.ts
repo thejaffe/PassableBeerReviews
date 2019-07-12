@@ -1,5 +1,6 @@
 import SendGrid = require("@sendgrid/mail");
 import { Request, Response, Router } from "express";
+import { body } from "express-validator";
 import { Mail } from "../classes/Mail";
 import { asyncWrapper } from "../middleware/asyncWrapper";
 import { PublishedViews } from "../middleware/publishedViews";
@@ -43,6 +44,11 @@ router.get("/reviews/:beer", (req: Request, res: Response) => {
 
 // send email route
 router.post("/contact", asyncWrapper(async (req: Request, res: Response) => {
+
+  body("first").trim().escape();
+  body("last").trim().escape();
+  body("email").trim().escape();
+  body("text").trim().escape();
 
   const msg = await new Mail(req);
   await SendGrid.send(msg);
