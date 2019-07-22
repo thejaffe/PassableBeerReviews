@@ -1,0 +1,98 @@
+<% include partials/boilerplate %>
+
+    <meta name="description" content=""Now, with my daily cloud-yelling exercises out of the way, I need to go eat a high-fiber breakfast and rub some ointment on my sore shoulder…"" />
+    <meta name="keywords" content="beer, reviews, swipe light" />
+
+    <meta property="og:title" content="Review — Swipe Light">
+    <meta property="og:description" content=""Now, with my daily cloud-yelling exercises out of the way, I need to go eat a high-fiber breakfast and rub some ointment on my sore shoulder…"">
+    <meta property="og:image" content="https://passablebeers.com/images/swipelight.png">
+    <meta property="og:url" content="https://passablebeers.com/reviews/swipelight">
+    <meta property="og:site_name" content="Passable Beer Reviews">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="tall, thin can of Southern Tier Swipe Light ale.">
+
+    <title>Review — Swipe Light</title>
+
+  </head>
+
+  <body>
+    <% include partials/header %>
+
+    <article>
+
+      <h1>Swipe Light</h1>
+
+      <img class="can" src="/images/swipelight.png" alt="tall, thin can of Southern Tier Swipe Light ale.">
+      <hr />
+
+      <p>As I find myself entering an age at which one might begin yelling at clouds, I try my best to avoid being an old man yelling at clouds. But some days I can't fight the compulsion to tell the kids to get the hell off my lawn. Sadly, this will be one of those days. I understand why a brewery would name a beer after a meme based on a dating app, but that doesn't mean I have to like it.</p>
+
+      <p>I get the sense that a growing number of adults enjoying some their first few legal beers have no use for Grandpa's light beers. And with good reason. Millennial disdain for Bud/Miller/Coors is a point in the generation's favor. And if you want to catch the eye of this market segment, I guess you could do worse than asking them to <a href="https://www.urbandictionary.com/define.php?term=Swipe%20right">"Swipe Right"</a> on something.</p> 
+
+      <p>Not everything new needs to be meme-related, though. Despite my love for the <a href="https://knowyourmeme.com/memes/spider-man-pointing-at-spider-man">Spider-Men</a> pointing at each other meme, I would be fine if internet culture in general just went away. The internet runs the good memes (even Spider-Men) into the ground after about five seconds. For every good meme, there are roughly 100,000 bad ones currently being shared by people you thought you loved.</p>
+
+      <input id="info-toggle" type="checkbox">
+      <label id="info-toggle-label" for="info-toggle">Beer Stats & Info</label>
+      <aside class="infobox">
+        <ul>
+          <li><strong>Brewed by: </strong>Southern Tier Brewing Company</li>
+          <li><strong>Style: </strong>American Pale Ale</li>
+          <li><strong>ABV: </strong>4.0%</li>
+          <li><strong>Commercial Description: </strong>"Swipe Light isn’t like the other basic light beers. This ale provides a complex and refined craft flavor at only 110 calories. With a 4% ABV, it’s a match for those who crave a refreshing, easy drinking experience."</li>
+          <li><strong>A Woman's Perspective: </strong>"Too sweet. If I wanted a low-calorie beer I'd rather have a Miller Lite or an All Day."</li>
+          <li><strong>Is it Passable Beer?: </strong>Except for the name, Swipe Light is everything one could want in a Passable Beer.</li>
+        </ul>
+      </aside>
+
+      <p>Sure, one could make a killing by slapping Fortnite on a can and calling it a "Performance Ale" or "Gamer Fuel" — actually, Mountain Dew already did <a href="https://www.mountaindew.com/mtn-dew-amp-game-fuel/">it</a> — but that doesn't mean it should be done. I enjoyed Southern Tier's version of a Passable Beer — a lot, actually — I'm just not sure I'm ready to give it "Would Date" status on Tinder. I am currently in a long-term relationship with Sierra Nevada, and one of our relationship rules is no dating apps.</p> 
+
+      <p>For some reason, I had always assumed Southern Tier was located somewhere in the Southern United States. The brewery is actually in Western New York and is a lot closer to Toronto than Atlanta. Southern Tier's market reach is well earned; it brews good beer. With such a good reputation, it should be able to name a Passable Beer just about anything they want and we, the Passable Beer Lovers of American (PBLA), should feel inclined to try it.</p>
+
+      <p>That a brewery like Southern Tier felt the inclination to name a damn fine beer "Swipe Light" to grab attention is an indictment of both the need to capture eyeballs in an oversaturated beer market and our own technology-obsessed culture. Every generation worries about the next one — and it has always been for naught, generally — but dammit, kids, we don't need Instagram Influencers telling us what beers to drink. You have <a href="/index">passablebeers.com</a> for that.</p>
+
+      <p>Now, with my daily cloud-yelling exercises out of the way, I need to go eat a high-fiber breakfast and rub some ointment on my sore shoulder before telling the kids next door that I'm keeping their soccer ball the next time it lands in my yard.</p>
+
+      <h3><span class="firstletter">O</span>ther Ratings</h3>
+
+      <aside class="ratings">
+        <div><a href="https://www.ratebeer.com/beer/southern-tier-swipe-light/711085/">RateBeer:</a>2.90/5</div><br />
+        <div><a href="https://www.beeradvocate.com/beer/profile/3818/403800/">Beeradvocate:</a>3.44/5</div>
+      </aside>
+
+      <h3 class="beer-links-head"><span class="firstletter">R</span>ecent Reviews</h3>
+
+      <aside class="beer-links bottom">
+        <% include partials/beerlinks %>
+      </aside>
+
+    </article>
+
+    <% include partials/footer %>
+
+    <script>
+
+      // Set animation height
+      if (document.body.scrollWidth >= 960) {
+        document.documentElement.style.setProperty('--pour-height',
+                                        -(document.body.scrollHeight) + "px");
+      }
+
+      // Add active class to current page
+      var elements = document.getElementsByClassName("beer-circle");
+      var listLength = elements.length;
+      var current = window.location.pathname.split("/")[2];
+      if (current.split(".")[1] !== "html") {
+        current += ".html";
+      }
+
+      for (let i = 0; i < listLength; i++) {
+        if (elements[i].toString().split("/")[4] === current) {
+          elements[i].classList.add("active");
+          break;
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
