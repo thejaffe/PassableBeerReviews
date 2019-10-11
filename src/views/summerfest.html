@@ -1,0 +1,96 @@
+<% include partials/boilerplate %>
+
+    <meta name="description" content="Summerfest is a miracle brewed by wizards." />
+    <meta name="keywords" content="beer, reviews, summerfest" />
+
+    <meta property="og:title" content="Review — Summerfest">
+    <meta property="og:description" content=Summerfest is a miracle brewed by wizards.>
+    <meta property="og:image" content="https://passablebeers.com/images/summerfest.png">
+    <meta property="og:url" content="https://passablebeers.com/reviews/summerfest">
+    <meta property="og:site_name" content="Passable Beer Reviews">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="can of Sierra Nevada Summerfest">
+
+    <title>Review — Summerfest</title>
+
+  </head>
+
+  <body>
+    <% include partials/header %>
+
+    <article>
+
+      <h1>Summerfest</h1>
+
+      <img class="can" src="/images/summerfest.png" alt="can of Sierra Nevada Summerfest">
+      <hr />
+
+      <p>Before this becomes yet another meta-commentary on the beer industry, let's start with the beer itself. Given the general quality of Sierra Nevada's other offerings, I was unsurprised by Summerfest. It is a damn good beer.</p>
+
+      <p>And in a rarity for beer marketing, Summerfest 100% matches up with the commercial description. It is indeed crisp. And golden. And dry. And incredibly drinkable. It's maybe the best warm-weather beer I've ever had — somehow refreshingly bland yet as complex and interesting as possible given the style. Summerfest is a miracle brewed by wizards.</p>
+
+      <p>I've come to expect nothing less from one of largest family-owned breweries in the United States. I can only hope that it, along with some of my other favorite breweries, stays independent. Like the good monopolists they are, the Big Beer conglomerates keep putting their capital reserves to use by buying up craft breweries.</p>
+
+      <input id="info-toggle" type="checkbox">
+      <label id="info-toggle-label" for="info-toggle">Beer Stats & Info</label>
+      <aside class="infobox">
+        <ul>
+          <li><strong>Brewed by: </strong>Sierra Nevada</li>
+          <li><strong>Style: </strong>Pilsner</li>
+          <li><strong>ABV: </strong>5%</li>
+          <li><strong>Commercial Description: </strong>"Crisp, golden, dry and incredibly drinkable, Summerfest has a delicate and complex malt flavor with spicy and floral hop character—the perfect warm-weather beer."</li>
+          <li><strong>A Woman's Perspective: </strong>It’s been so long that neither of us can remember her take on this beer. Let’s assume she had one, and assume she liked, but did not love, it.</li>
+          <li><strong>Is it Passable Beer?: </strong>This is like the Holy Grail of Passable Beers.</li>
+        </ul>
+      </aside>
+
+      <p>I can still remember when AB-InBev roiled Asheville with its Wicked Weed purchase. The Asheville beer scene may be a little too up its own ass at times, but Wicked Weed selling out was genuinely surprising. Which is not to say that I blame the former owners — I'm sure they got a truckload of money and since the sale you can find Wicked Weed offerings almost anywhere. When they sell out to Big Beer, craft brewers trade a loss of independence for a lot of money and in increase in market share.</p>
+
+      <p>Again, it's not a bad trade and again, that's just capitalism at work. I would expect this consolidation to continue as the market starts correcting itself for what I would argue is a brewery bubble. When I'm out and looking for a good beer, I can trust that Sierra Nevada, or some other local brewery, is making something delicious and interesting. I also know that Wicked Weed's Pernicious IPA is still great too.</p> 
+
+      <p>I also know that all things equal, I'm going to choose the local, independent brewer 12 times out of 10 — even when I'm looking for a bland Passable Beer. Big Beer spent most of the post-prohibition years making nothing but bland swill when they could have been making something like Summerfest. It's time for them to pay for their sins — which are many. As a consumer, I get to make that choice because capitalism works in the other direction too.</p>
+
+      <h3><span class="firstletter">O</span>ther Ratings</h3>
+
+      <aside class="ratings">
+        <div><a href="https://www.ratebeer.com/beer/sierra-nevada-summerfest/369/">RateBeer:</a>3.02/5</div><br />
+        <div><a href="https://www.beeradvocate.com/beer/profile/140/3558/">Beeradvocate:</a>3.7/5</div>
+      </aside>
+
+      <h3 class="beer-links-head"><span class="firstletter">R</span>ecent Reviews</h3>
+
+      <aside class="beer-links bottom">
+        <% include partials/beerlinks %>
+      </aside>
+
+    </article>
+
+    <% include partials/footer %>
+
+    <script>
+
+      // Set animation height
+      if (document.body.scrollWidth >= 960) {
+        document.documentElement.style.setProperty('--pour-height',
+                                        -(document.body.scrollHeight) + "px");
+      }
+
+      // Add active class to current page
+      var elements = document.getElementsByClassName("beer-circle");
+      var listLength = elements.length;
+      var current = window.location.pathname.split("/")[2];
+      if (current.split(".")[1] !== "html") {
+        current += ".html";
+      }
+
+      for (let i = 0; i < listLength; i++) {
+        if (elements[i].toString().split("/")[4] === current) {
+          elements[i].classList.add("active");
+          break;
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
