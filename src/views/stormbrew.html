@@ -1,0 +1,117 @@
+<% include partials/boilerplate %>
+
+    <meta name="description" content="Storm Brew is the perfect pairing for the Tripp Tracy drinking game." />
+    <meta name="keywords" content="beer, reviews, storm brew" />
+
+    <meta property="og:title" content="Review — Storm Brew">
+    <meta property="og:description" content="Storm Brew is the perfect pairing for the Tripp Tracy drinking game.">
+    <meta property="og:image" content="https://passablebeers.com/images/stormbrew.png">
+    <meta property="og:url" content="https://passablebeers.com/reviews/stormbrew.html">
+    <meta property="og:site_name" content="Passable Beer Reviews">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="black can of storm brew, with white lettering and Carolina Hurricane accent colors of red and grey.">
+
+    <title>Review — Storm Brew</title>
+
+  </head>
+
+  <body>
+    <% include partials/header %>
+
+    <article>
+
+      <h1>Storm Brew</h1>
+
+      <img class="can" src="/images/stormbrew.png" alt="black can of storm brew, with white lettering and Carolina Hurricane accent colors of red and grey.">
+      <hr />
+
+      <p>Is it a coincidence that the Carolina Hurricanes released an official beer, Storm Brew, a collaboration with Raleigh’s R&D Brewing, in the same calendar year it returned to the playoffs? Probably. But in the year of our lord 2020 we should be questioning anything remotely coincidental when the simulation writers have clearly gone insane.</p> 
+
+      <p>Storm Brew is passable if a little sweet on the front end, and low in calories. It’s also cheap when you can find it in the store and is the cheapest beer you can get at the Hurricanes’ home, PNC Arena. If you ever catch a game there and usually opt for something from Bud, Miller or Coors then you can get just as good of a beer, or better really, for less with Storm Brew.</p>
+
+      <p>But we aren’t here because I felt a pressing need to review a highly local light beer. We’re here because of the best drinking game my wife and I ever created but never actually play: The Tripp Tracy drinking game.</p>
+
+      <p>We came to our hockey fandom together, becoming “Caniacs” right after getting married in 2010 but we arrived at exactly the wrong time. Starting with the 2009-10 season the team failed to make the playoffs for nine straight seasons. The NHL record for playoff droughts is 10.</p>
+
+      <input id="info-toggle" type="checkbox">
+      <label id="info-toggle-label" for="info-toggle">Beer Stats & Info</label>
+      <aside class="infobox">
+        <ul>
+          <li><strong>Brewed by: </strong>R&D Brewing</li>
+          <li><strong>Style: </strong>Light Lager</li>
+          <li><strong>ABV: </strong>4.2%</li>
+          <li><strong>Commercial Description: </strong>"The Official Beer of the Carolina Hurricanes."</li>
+          <li><strong>A Woman's Perspective: </strong>She’s not as big of a fan of this beer as she is of the Carolina Hurricanes.</li>
+          <li><strong>Is it Passable Beer?: </strong>Storm Brew is as good or better than any Canadian beer (small sample size), I’ve ever had so it’s Passable enough for hockey, Eh?</li>
+        </ul>
+      </aside>
+
+      <p>Prior to the "Year of the Jerks" John Forslund(TV play-by-play), Tracy(analyst), and hockey hall-of-famer Chuck Kaiton(radio) provided the soundtrack to these desolate years. While the product on the ice alternated between mediocre and turd, the Hurricanes boasted arguably the best collection of local broadcast talent in the NHL. Forslund does national work with NBC and Kaiton earned the Foster Hewitt Memorial Award from the Hockey Hall of Fame.</p>
+
+      <p>Tripp is a homer’s homer and like any good analyst he has topics he’ll mention every game — sometimes many, many times a game. His relentless enthusiasm, homerism, and ability to get every coach’s challenge or goal review prediction exactly wrong made him a fan favorite in our house. Over a period of years, we have developed the Tripp Tracy drinking game, and it’s past time to share this gift with the world.</p>
+
+      <p>The game is simple: unless otherwise noted, take one sip everytime Tripp:</p>
+
+      <ul class="inline-ul">
+        <li>Claims some (possibly deceased) famous person is a "huge Caniac"</li>
+        <li>Talks about a how good a player’s family is</li>
+        <li>Lauds a player's hockey IQ</li>
+        <li>Talks about how being right-/left-handed will help/hurt on this faceoff</li>
+        <li>Speculates about using a timeout</li>
+        <li>Chug for the length of an NHL timeout (30 seconds) if the coach doesn’t call his one timeout after Tripp invokes timeout speculation</li>
+        <li>Says this is the best shift/period/game/week/month of a player’s time with the Canes/season/career</li>
+        <li>Claims that the upcoming power play/penalty kill is the most important moment of the game</li>
+        <li>Reminds you that the goalie is the fifth penalty killer</li>
+        <li>Claims that a penalty kill isn’t over until the next whistle</li>
+        <li>Reminds you that players cannot change on an icing</li>
+        <li>Says that the next team to score is going to win</li>
+        <li>Shotgun a beer after the game if the above turns out to the false</li>
+        <li>Makes an incorrect guess at the outcome of a challenge/goal review</li>
+      </ul>
+
+      <p>Tripp is one of a kind and I hope he and his frosted tips stay with the team forever. As always drink responsibly and only play this game if you have a healthy liver and believe it needs to be less healthy. And if you play it, play it with a Storm Brew. Ferda boys. #hockeyisforeveryone</p>
+
+      <h3><span class="firstletter">O</span>ther Ratings</h3>
+
+      <aside class="ratings">
+        <div><a href="https://www.ratebeer.com/beer/r-and-d-storm-brew/800862/">RateBeer:</a>3.07/5</div><br />
+        <div><a href="https://www.beeradvocate.com/beer/profile/51516/466459/">Beeradvocate:</a>3.6/5</div>
+      </aside>
+
+      <h3 class="beer-links-head"><span class="firstletter">R</span>ecent Reviews</h3>
+
+      <aside class="beer-links bottom">
+        <% include partials/beerlinks %>
+      </aside>
+
+    </article>
+
+    <% include partials/footer %>
+
+    <script>
+
+      // Set animation height
+      if (document.body.scrollWidth >= 960) {
+        document.documentElement.style.setProperty('--pour-height',
+                                        -(document.body.scrollHeight) + "px");
+      }
+
+      // Add active class to current page
+      var elements = document.getElementsByClassName("beer-circle");
+      var listLength = elements.length;
+      var current = window.location.pathname.split("/")[2];
+      if (current.split(".")[1] !== "html") {
+        current += ".html";
+      }
+
+      for (let i = 0; i < listLength; i++) {
+        if (elements[i].toString().split("/")[4] === current) {
+          elements[i].classList.add("active");
+          break;
+        }
+      }
+
+    </script>
+
+  </body>
+</html>

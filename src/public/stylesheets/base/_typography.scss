@@ -9,7 +9,10 @@ p {
   opacity: 0.9;
 }
 
-strong, h1, h2, h3 {
+strong,
+h1,
+h2,
+h3 {
   font-weight: bold;
 }
 
@@ -21,7 +24,9 @@ a {
   color: white;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: $font-headline;
   text-align: center;
 }
@@ -40,7 +45,9 @@ h3 {
   font-size: 1.75em;
 }
 
-.active {color: $gray;}
+.active {
+  color: $gray;
+}
 
 .firstletter {
   font-size: 2em;
@@ -49,43 +56,60 @@ h3 {
 
 /* Inline Link Styles ---------------------------------------------------     */
 
-p a, .ratings a, article li a {
-	font-weight: bold;
-	color: inherit;
-	position: relative;
+p a,
+.ratings a,
+article li a {
+  font-weight: bold;
+  color: inherit;
+  position: relative;
 }
 
-p a:before, .ratings a:before, article li a:before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	background-color: $red;
-	visibility: hidden;
-	transform: scaleX(0);
-	transition: all 0.3s ease-in-out 0s;
+p a:before,
+.ratings a:before,
+article li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $red;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
 }
 
-p a:hover, .ratings a:hover, article li a:hover {color: $red;}
+p a:hover,
+.ratings a:hover,
+article li a:hover {
+  color: $red;
+}
 
-p a:hover:before, .ratings a:hover:before, article li a:hover:before {
-	visibility: visible;
-	transform: scaleX(1);
+p a:hover:before,
+.ratings a:hover:before,
+article li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 /* Hover Transitions */
-p a, .ratings a, article li a, input[type=submit] {
+p a,
+.ratings a,
+article li a,
+input[type="submit"] {
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
 /* END inline link styles --------------------------------------------------- */
 
-.inline-ul {width: 70%;}
+.inline-ul {
+  width: 70%;
+  max-width: 532px;
+}
 
-.inline-ul, ol {
+.inline-ul,
+ol {
   margin: 0 auto 1em auto;
   list-style-type: disc;
   line-height: 1.4;
@@ -101,7 +125,7 @@ ol {
 
   @supports (display: grid) {
     @media only screen and (min-width: 655px) {
-       grid-column: 1 / 3;
+      grid-column: 1 / 3;
     }
 
     @media only screen and (min-width: 960px) {
@@ -114,7 +138,9 @@ ol {
   }
 }
 
-li {padding: 0.25em;}
+li {
+  padding: 0.25em;
+}
 
 hr {
   @supports (display: grid) {
