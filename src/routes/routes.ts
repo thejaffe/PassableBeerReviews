@@ -1,9 +1,9 @@
 import SendGrid = require("@sendgrid/mail");
 import { Request, Response, Router } from "express";
-import { body } from "express-validator";
 import { Mail } from "../classes/Mail";
 import { asyncWrapper } from "../middleware/asyncWrapper";
 import { PublishedViews } from "../middleware/publishedViews";
+import { verifyCaptcha } from "../middleware/verifyCaptcha";
 
 const router: Router = Router();
 
@@ -42,23 +42,17 @@ router.get("/reviews/:beer", (req: Request, res: Response) => {
 router.post(
   "/contact",
   asyncWrapper(async (req: Request, res: Response) => {
-    body("first")
-      .trim()
-      .escape();
-    body("last")
-      .trim()
-      .escape();
-    body("email")
-      .trim()
-      .escape();
-    body("text")
-      .trim()
-      .escape();
+    const verification = await verifyCaptcha(req.body.recaptcha);
 
-    const msg = await new Mail(req);
-    await SendGrid.send(msg);
-
-    res.render("success.html");
+    if (JSON.parse(verification.body).success) {
+      const msg = new Mail(req);
+      await SendGrid.send(msg);
+      res.render("success.html");
+    } else {
+      throw new Error(
+        "If you're really a human, please select the Captcha to send mail."
+      );
+    }
   })
 );
 
@@ -75,7 +69,7 @@ router.all(
   "*",
   asyncWrapper(async (req: Request, res: Response) => {
     await new Promise((resolve) => setTimeout(() => resolve(), 50));
-    throw new Error("Unknown, this error has been reported");
+    throw new Error("Unknown error");
   })
 );
 

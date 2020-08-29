@@ -1,5 +1,6 @@
 import { MailData } from "@sendgrid/helpers/classes/mail";
 import { Request } from "express";
+import { body } from "express-validator";
 
 export class Mail implements MailData {
   public isMultiple?: boolean;
@@ -53,14 +54,20 @@ export class Mail implements MailData {
 
   // Constructor formats form request into MailData
   constructor(req: Request) {
+    body("first").trim().escape();
+    body("last").trim().escape();
+    body("email").trim().escape();
+    body("text").trim().escape();
+
     const firstName = req.body.first;
     const lastName = req.body.last;
     const email = req.body.email;
+    const suggestion = req.body.suggestion;
 
     this.from = "beersuggestions@passablebeers.com";
     this.replyTo = email;
     this.subject = `Beer Suggestion from ${firstName + " " + lastName}`;
-    this.text = req.body.suggestion;
+    this.text = suggestion;
     this.to = "passablebeers@gmail.com";
   }
 }

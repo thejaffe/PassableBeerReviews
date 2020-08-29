@@ -1,4 +1,4 @@
-import bodyParser from "body-parser";
+// import bodyParser from "body-parser";
 import ejs from "ejs";
 import express from "express";
 import helmet from "helmet";
@@ -23,7 +23,7 @@ class App {
     this.app.use(express.static(__dirname + "/public"));
     this.app.use(favicon(__dirname + "/public/images/favicon.ico"));
 
-    this.app.use(bodyParser.urlencoded({ extended: false }));
+    this.app.use(express.urlencoded({ extended: false }));
 
     this.app.use(Routes);
     this.app.use(errorHandler);
