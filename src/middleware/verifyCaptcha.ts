@@ -1,7 +1,7 @@
 import got from "got";
 
 export function verifyCaptcha(token: string) {
-  const key = process.env.recaptcha;
+  const key = process.env.SECRET_KEY;
 
   if (token === undefined || token === "" || token === null) {
     throw new Error(

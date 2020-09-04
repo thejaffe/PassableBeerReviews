@@ -49,9 +49,7 @@ router.post(
       await SendGrid.send(msg);
       res.render("success.html");
     } else {
-      throw new Error(
-        "If you're really a human, please select the Captcha to send mail."
-      );
+      throw new Error(JSON.parse(verification.body)["error-codes"]);
     }
   })
 );
