@@ -18,6 +18,7 @@ export class PublishedViews {
       "happybirthdaynana.html"
     ];
     this.reviews = [
+      "innertube.html",
       "stormbrew.html",
       "summerfest.html",
       "swipelight.html",

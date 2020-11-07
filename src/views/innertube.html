@@ -1,0 +1,99 @@
+<% include partials/boilerplate %>
+
+    <meta name="description" content="Innertube is as unpretentious and relaxing as a day spent on a giant piece of rubber in the middle of a beautiful creation." />
+    <meta name="keywords" content="beer, reviews, innnertube lager" />
+    <link rel="canonical" href="https://passablebeers.com/reviews/innertube.html.html" />
+
+    <meta property="og:title" content="Review — Innertube">
+    <meta property="og:description" content="Innertube is as unpretentious and relaxing as a day spent on a giant piece of rubber in the middle of a beautiful creation.">
+    <meta property="og:image" content="https://passablebeers.com/images/innertube.png">
+    <meta property="og:url" content="https://passablebeers.com/reviews/innertube.html">
+    <meta property="og:site_name" content="Passable Beer Reviews">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image:alt" content="white can of Innertube beer from Burial Brewing. Color accents of red, blue, and gold.">
+
+    <title>Review — Innertube</title>
+
+  </head>
+
+  <body>
+    <% include partials/header %>
+
+    <article>
+
+      <h1>Innertube</h1>
+
+      <img class="can" src="/images/innertube.png" alt="white can of Innertube beer from Burial Brewing. Color accents of red, blue, and gold.">
+      <hr />
+
+      <p>I often find my thoughts to be jumbled and troubled even in the best of times. In times such as our current Covid dystopia I cling to memories — even new ones built during a global pandemic — of peace, grace, and beauty to calm my anxious mind.</p>
+      
+      <p>Which is why Burial Brewing's seasonal lager Innertube was such a gift in the middle of Plague Summer 2020. With tubing, along with many of life's other simple pleasures, off the table this year the aptly named Innertube did indeed set me "adrift down the river of refreshment."</p>
+      
+      <p>I've found that we humans don't like to acknowledge the giant pile of things over which we have zero control. You get dealt a bad hand in the genetic lottery and it's bye bye before you turn 40, bud. A global pandemic (hypothetically) could come along and render the career you thought to be stable obsolete through no fault of your own.</p>
+
+      <input id="info-toggle" type="checkbox">
+      <label id="info-toggle-label" for="info-toggle">Beer Stats & Info</label>
+      <aside class="infobox">
+        <ul>
+          <li><strong>Brewed by: </strong>Burial Beer Co.</li>
+          <li><strong>Style: </strong>Lager</li>
+          <li><strong>ABV: </strong>3.5%</li>
+          <li><strong>Commercial Description: </strong>"This throwback American wonder was concocted from our memories, and the curiosity for the light lagers that laid waiting in our fathers' fridge. Brewed with North American barley, corn and rice and lagered carefully, this lager is meant to enjoy all summer long. Set Adrift Down the River of Refreshment."</li>
+          <li><strong>A Woman's Perspective: </strong>"I may have consumed these too fast to share with my wife this summer. Either way I don't remember her take. But one should always respect her opinions, even re: beer despite her "Bud Light Lime isn't bad in the summer" take."</li>
+          <li><strong>Is it Passable Beer?: </strong>I think Innertube is the best passable lager I've ever had. Top marks.</li>
+        </ul>
+      </aside>
+
+      <p>This long and distinguished list of things we cannot control is the reality that we, the "Masters of Our Own Destiny and Also, the Universe", try so desperately to discount by either ignoring it entirely, or thinking things like "Well, everything causes cancer so I might as well eat whatever I want and avoid exercising." This latter tactic is flawed logic, at best. Some non-zero chance that a bus could hit you today exists, but that three-pack-a-day cigarette habit is 100% fatal.</p>
+      
+      <p>And so I try to recall, as often as my bothered brain allows, the times where I can push aside things I can and cannot control to just exist, even if only for a few moments. Innertube Beer was a welcome respite this summer. It reminded me of those times when I could just float down the river, carried along by currents I had no capability or desire to control.</p> 
+        
+      <p>Innertube is as unpretentious and relaxing as a day spent on a giant piece of rubber in the middle of a beautiful creation. Burial Brewing is one of the best in Asheville, which puts it high in the running for one of best breweries in the country. It came as no surprise that Innertube is one of the best Passable Beers I've ever had and would be a perfect companion for floating down a river on a hot summer's day.</p>
+      
+      <p>I haven't been tubing in some years, and it's unclear if I'll make it back this upcoming summer. But, good Lord willing and the creek don't rise, I'll set myself adrift down a river or refreshment and relaxation again. May we all do so again someday soon.</p>
+
+      <h3><span class="firstletter">O</span>ther Ratings</h3>
+
+      <aside class="ratings">
+        <div><a href="https://www.ratebeer.com/beer/burial-french-broad-river-inner-tube/528206/">RateBeer:</a>3.11/5</div><br />
+        <div><a href="https://www.beeradvocate.com/beer/profile/31722/288313/">Beeradvocate:</a>3.93/5</div>
+      </aside>
+
+      <h3 class="beer-links-head"><span class="firstletter">R</span>ecent Reviews</h3>
+
+      <aside class="beer-links bottom">
+        <% include partials/beerlinks %>
+      </aside>
+
+    </article>
+
+    <% include partials/footer %>
+
+    <script>
+
+      // Set animation height
+      if (document.body.scrollWidth >= 960) {
+        document.documentElement.style.setProperty('--pour-height',
+                                        -(document.body.scrollHeight) + "px");
+      }
+
+      // Add active class to current page
+      var elements = document.getElementsByClassName("beer-circle");
+      var listLength = elements.length;
+      var current = window.location.pathname.split("/")[2];
+      if (current.split(".")[1] !== "html") {
+        current += ".html";
+      }
+
+      for (let i = 0; i < listLength; i++) {
+        if (elements[i].toString().split("/")[4] === current) {
+          elements[i].classList.add("active");
+          break;
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
