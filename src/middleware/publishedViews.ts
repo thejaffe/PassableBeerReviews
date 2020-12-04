@@ -11,7 +11,6 @@ export class PublishedViews {
       "favoritebeers.html",
       "contact.html",
       "reviews.html",
-      "adjuncts.html",
       "valentine.html",
       "specialvalentine.html",
       "mothersday.html",

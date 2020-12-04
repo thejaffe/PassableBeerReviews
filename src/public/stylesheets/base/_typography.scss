@@ -11,8 +11,7 @@ p {
 
 strong,
 h1,
-h2,
-h3 {
+h2 {
   font-weight: bold;
 }
 
@@ -25,8 +24,7 @@ a {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: $font-headline;
   text-align: center;
 }
@@ -38,11 +36,11 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
-h3 {
-  font-size: 1.75em;
+.homeheader {
+  font-size: 2em;
 }
 
 .active {
