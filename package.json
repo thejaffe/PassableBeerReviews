@@ -33,7 +33,7 @@
     "@sendgrid/mail": "6.4.0",
     "@types/got": "^9.6.11",
     "ejs": "^2.7.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-validator": "^6.6.1",
     "got": "^11.7.0",
     "helmet": "^3.23.3",
